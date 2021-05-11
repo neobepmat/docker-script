@@ -1,0 +1,13 @@
+version: "3"
+services:
+  testapp:
+    build: .
+    
+    image: ubuntu
+    
+    context: ./dir
+    
+    dockerfile: Dockerfile-alternate
+      args:
+        buildno: 1
+        gitcommithash: cdc3b19

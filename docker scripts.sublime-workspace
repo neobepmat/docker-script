@@ -1,0 +1,702 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"DIAM",
+				"DIAM_INPUT_MEASURE"
+			],
+			[
+				"D",
+				"dir"
+			],
+			[
+				"TEM",
+				"TEMPORANEE"
+			],
+			[
+				"DbC",
+				"DbCommonLibrary"
+			],
+			[
+				"data",
+				"DataProvider"
+			],
+			[
+				"target_",
+				"target_CLAEFEntityFramework"
+			],
+			[
+				"disp",
+				"disp_h_calc\tstatement"
+			],
+			[
+				"iso",
+				"isofile"
+			],
+			[
+				"js",
+				"jsonScript"
+			],
+			[
+				"IDb",
+				"IDbConnectionFactory"
+			],
+			[
+				"Class",
+				"CLASSREPOSITORY"
+			],
+			[
+				"TEMP",
+				"TEMP_SPOOL"
+			],
+			[
+				"Base",
+				"BaseSchema"
+			],
+			[
+				"Bas",
+				"BaseTable"
+			],
+			[
+				"Pa",
+				"ParamArray"
+			],
+			[
+				"Pri",
+				"PrimaryKeyType"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Anaconda Python Builder",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/Virtualenv/Python + Virtualenv.sublime-build",
+					""
+				]
+			],
+			[
+				"Anaconda Python Builder",
+				""
+			]
+		],
+		[
+			[
+				[
+					"NodeJs",
+					""
+				],
+				[
+					"Python",
+					""
+				]
+			],
+			[
+				"NodeJs",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/Virtualenv/Python + Virtualenv.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Virtualenv/Python + Virtualenv.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"terminus",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"ter",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"terminu",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"termin",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"image",
+				"MarkdownEditing: New Inline Image"
+			],
+			[
+				"snippet",
+				"Snippet: html"
+			],
+			[
+				"i",
+				"Snippet: Markdown Image"
+			],
+			[
+				"unfold",
+				"MarkdownEditing: Unfold All Sections"
+			],
+			[
+				"fold",
+				"MarkdownEditing: Fold All Sections"
+			],
+			[
+				"de",
+				"Virtualenv: Deactivate"
+			],
+			[
+				"virtual",
+				"Virtualenv: Activate"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"virt",
+				"Virtualenv: Activate"
+			],
+			[
+				"activa",
+				"Virtualenv: Activate"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"acti",
+				"Virtualenv: Activate"
+			],
+			[
+				"deac",
+				"Virtualenv: Deactivate"
+			],
+			[
+				"virtua",
+				"Virtualenv: Activate"
+			],
+			[
+				"packge",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"preview",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"markdown",
+				"Snippet: Markdown Codeblock"
+			],
+			[
+				"ima",
+				"Snippet: Markdown Image"
+			],
+			[
+				"link",
+				"Snippet: Markdown Hyperlink"
+			],
+			[
+				"markdow",
+				"MarkdownEditing: Run markdownlint"
+			],
+			[
+				"markline",
+				"MarkdownEditing: New Inline Link"
+			],
+			[
+				"new line",
+				"MarkdownEditing: New Inline Link"
+			],
+			[
+				"mark",
+				"MarkdownEditing: New Inline Image"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"P",
+				"Package Control: Install Package"
+			],
+			[
+				"xml",
+				"DataConverter: to XML Nodes"
+			],
+			[
+				"set synta",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"set ",
+				"Set Syntax: Perl"
+			],
+			[
+				"to xml",
+				"DataConverter: to XML Properties"
+			],
+			[
+				"convert",
+				"DataConverter: to JSON"
+			],
+			[
+				"php",
+				"DataConverter: to PHP"
+			],
+			[
+				"json",
+				"DataConverter: to JSON (first column as key)"
+			],
+			[
+				"export",
+				"Snippet: XML Processing Instruction"
+			],
+			[
+				"data",
+				"DataConverter: to XML Properties"
+			],
+			[
+				"MarkdownEditing: Fold",
+				"MarkdownEditing: Fold Level 2 Sections"
+			],
+			[
+				"rmove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"install packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/docker",
+		"/C/docker/script",
+		"/C/docker/script/gitlab",
+		"/C/docker/script/postgres-9.6-alpine",
+		"/C/docker/script/postgres-9.6.21"
+	],
+	"file_history":
+	[
+		"/C/docker/script/gitlab/svn-list",
+		"/C/docker/script/gitlab/assembly refs wb",
+		"/C/Users/giuseppe.grilli/Desktop/Considerazioni Brasiliane.md",
+		"/C/cla/general.ini",
+		"/C/cla/general.ini.01-010-25-00",
+		"/C/cla/general.ini.01-010-24-03",
+		"/C/Users/giuseppe.grilli/Documents/CLA/tools CLA/youtrack whatsnew/[usare WhatsNew su YouTrack].md",
+		"/C/docker/script/gitlab/assembly refs wb.md",
+		"/C/docker/script/gitlab/docker-compose.yml",
+		"/C/docker/script/gitlab/clone svn in git.md",
+		"/C/docker/script/gitlab/Authors.txt",
+		"/C/Users/giuseppe.grilli/.ssh/config",
+		"/C/docker/script/gitlab/clone svn in git.html",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Windows/System32/drivers/etc/hosts.ics",
+		"/C/docker/script/postgres-9.6.21 RasaRd01/first install Streicher.md",
+		"/C/tmp/sshkeys/gitlab-docker.pub",
+		"/C/docker/script/postgres-9.6.21 RasaRd01/credentials.md",
+		"/C/Users/giuseppe.grilli/.wslconfig",
+		"/C/docker/script/postgres-9.6.21 RasaRd01/create-tablespaces.sql",
+		"/C/docker/script/postgres-9.6.21 RasaRd01/create-folders-for-tablespaces.cmd",
+		"/C/docker/script/postgres-9.6.21 RasaRd01/create-login-roles.sql",
+		"/C/docker/script/alpine/start shell",
+		"/C/docker/script/alpine/start.cmd",
+		"/C/docker/script/alpine/docker-compose.yml",
+		"//wsl$/Ubuntu-20.04/var/log/dpkg.log",
+		"/C/Users/giuseppe.grilli/AppData/Roaming/Docker Desktop/logs/main.log",
+		"/C/docker/script/gitlab/exec docker compose.md",
+		"/C/docker/script/gitlab/docker run",
+		"/C/cla/general.ini.01-010-24-04",
+		"/C/Users/giuseppe.grilli/Documents/CLA/software CLA/Capire algoritmo CLAEntityFramework.md",
+		"/C/Users/giuseppe.grilli/Documents/Risposte per ticket #17138.md",
+		"/C/docker/script/oracle-alpine/README.md",
+		"/C/docker/script/oracle-alpine/patchbuilder usage.md",
+		"/C/docker/script/postgres-9.6.21/create-tablespaces.sql",
+		"/C/docker/script/postgres-9.6.21/create-folders-for-tablespaces.cmd",
+		"/C/docker/script/postgres-9.6.21/create-login-roles.sql",
+		"/C/docker/script/postgres-9.6.21/credentials.md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/pwd.md",
+		"/C/docker/script/postgres-9.6-alpine/create-tablespaces.sql",
+		"/C/docker/script/oracle-alpine/create-tablespaces.sql",
+		"/C/docker/script/oracle-alpine/drop-tablespaces.sql",
+		"/C/bin/PatchBuilder/SysDbCreating.log",
+		"/C/docker/script/oracle-alpine/drop-user.sql",
+		"/C/develop/SharpPlantERD/SysTables/SystemTables.prj",
+		"/C/bin/PatchBuilder/creation.sql",
+		"/C/bin/PatchBuilder/creation_pg.sql",
+		"/C/bin/PatchBuilder/PatchBuilder.vshost.exe.config",
+		"/C/bin/PatchBuilder/PatchBuilder.exe.config",
+		"/C/bin/PatchBuilder/PatchBuilder.xml",
+		"/C/docker/script/oracle-alpine/installation.md",
+		"/C/docker/script/oracle-alpine/dockerfile",
+		"/C/docker/script/oracle-alpine/build.cmd",
+		"/C/docker/script/oracle-alpine/run.cmd",
+		"/C/docker/script/alpine/exec.cmd",
+		"/C/docker/script/alpine/run.cmd",
+		"/C/docker/script/alpine/dockerfile",
+		"/C/docker/script/python2-7/docker-compose.yml",
+		"/C/docker/script/alpine/build.cmd",
+		"/C/docker/script/python2-7/dockerfile",
+		"/C/docker/script/ubuntu/compose-build.cmd",
+		"/C/docker/script/ubuntu/dockerfile",
+		"/C/docker/script/ubuntu/run.cmd",
+		"/C/docker/script/ubuntu/build.cmd",
+		"/C/docker/script/python2-7/wait_service.py",
+		"/C/docker/script/python2-7/Dockerfile-alternate",
+		"/C/docker/script/postgres-9.6-alpine/docker-compose.yml",
+		"/C/docker/script/python2-7/build.cmd",
+		"/C/docker/script/postgres-9.6-alpine/dockerrun.cmd",
+		"/C/Users/giuseppe.grilli/postgresql/pg96alpine/data/postgresql.conf",
+		"/C/docker/script/postgres-9.6-alpine/database.env",
+		"/C/docker/script/dockerrun.cmd",
+		"/C/develop-test/git/docker/app/Dockerfile",
+		"/C/develop-test/git/docker/app/src/static/js/app.js",
+		"/C/Program Files/PostgreSQL/9.6/data/postgresql.conf",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/documentation/[Import Data].md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/meetings/[meeting 2021 02 03] CLA x Bonatti.md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/documentation/[R04].md",
+		"/C/Users/giuseppe.grilli/Desktop/Import Data 01-02-2021.md",
+		"/C/Users/giuseppe.grilli/Desktop/Import Data 01-02-2021 con correzioni.md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/meetings/[2021 02 03] CLA Qualita.md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/documentation/[R02].md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/[app improvements].md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/info-docs/[gestione delle transazioni].md",
+		"/C/Temp/wb-deploy-techint/NLog.config",
+		"/C/Users/giuseppe.grilli/Documents/CLA/spider/meetings/[2021 01 27 Spider per Team CLA].md",
+		"/C/cla/general.ini.postgresql",
+		"/C/cla/general.ini.working",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/meetings/[meeting 2021 01 21] Bonatti.md",
+		"/C/Users/giuseppe.grilli/Documents/Visual Studio 2017/CommonFile/fileNameLastCheckPreBuild.json",
+		"/C/Users/giuseppe.grilli/Documents/CLA/test-howto/[linee guida per svolgere i test].md",
+		"/C/develop/EL-Sviluppo/Elena/Cmd/Servers/StartPMserver.bat",
+		"/C/develop-test/git/javascript/coldwar/server/runner.js",
+		"/C/develop-test/git/javascript/coldwar/lib/logger.mjs",
+		"/C/develop-test/git/javascript/coldwar/package.json",
+		"/C/develop-test/git/javascript/coldwar/config/index.sample.js",
+		"/C/Users/giuseppe.grilli/AppData/Local/npm-cache/_logs/2021-01-23T16_38_37_504Z-debug.log",
+		"/C/develop-test/git/javascript/coldwar/coldwar.sublime-project",
+		"/C/develop-test/git/javascript/coldwar/server/mytest.js",
+		"/C/Users/giuseppe.grilli/Documents/CLA/spider/meetings/[2021 01 22 Spider per Team CLA].md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/spider/meetings/[2021 01 22 ENI].md",
+		"/C/develop-test/git/python/sandbox/sandbox.sublime-project",
+		"/C/develop-test/git/python/sandbox/src/show.js",
+		"/C/develop-test/git/python/sandbox/.sublime-project",
+		"/C/develop-test/git/python/sandbox/src/test.py",
+		"/C/develop-test/git/python/python-cold-war/play.py",
+		"/C/develop-test/git/python/python-cold-war/test.py",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/[Import Export WSL].md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/meetings/[meeting 2021 01 21[ Bonatti.md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/[possible improvements].md",
+		"/C/Users/giuseppe.grilli/AppData/Roaming/Sublime Text 3/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
+		"/C/Users/giuseppe.grilli/AppData/Roaming/Sublime Text 3/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/C/Users/giuseppe.grilli/Documents/CLA/spider/meetings/[2021 01 19 Spider per Team CLA].md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/docs/[principali form].md",
+		"/C/Users/giuseppe.grilli/Desktop/Taco.wiet",
+		"/C/cla/WeldingBook_01.010.21.00/wiet/Taco.wiet",
+		"/C/cla/WeldingBook_01.010.21.00/wiet.ini",
+		"/C/cla/general.ini.latest",
+		"/C/Users/giuseppe.grilli/Documents/CLA/spider/meetings/[2021 01 15 ENI].md",
+		"/C/tmp/wbdeploy/NLog.config",
+		"/C/tmp/wbdeploy/NLog.config.trace",
+		"/C/Users/giuseppe.grilli/Documents/CLA/software CLA/[application command view documents].md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/spider/[intro spider attività 2021].md",
+		"/C/Users/giuseppe.grilli/Documents/CLA/welding book/modelloGestioneOperazioniDb/[gestione operazioni db].md",
+		"/C/tmp/xml files/R02_JointToBeTestedClass.xml",
+		"/C/tmp/xml files/R17_OverallNDTClassData.xml",
+		"/C/tmp/xml files/R15_IsoWeldedClass.xml",
+		"/C/tmp/xml files/R05_OverallNDTbyWelderClassData.xml"
+	],
+	"find":
+	{
+		"height": 46.0
+	},
+	"find_in_files":
+	{
+		"height": 130.0,
+		"where_history":
+		[
+			"C:\\develop-test\\git\\python\\drive-car",
+			"C:\\develop-test\\git\\python\\MarioWorldAI-NEAT",
+			"C:\\develop-test\\git\\python\\Drive-Car",
+			"C:\\Users\\giuseppe.grilli\\Documents",
+			"C:\\develop\\WB_01.010.21.00",
+			"C:\\Users\\giuseppe.grilli\\Documents\\CLA",
+			"C:\\Users\\giuseppe.grilli\\Documents",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"F:",
+			"D:",
+			"DA",
+			"D",
+			"myusr",
+			"error",
+			"restore",
+			"archive",
+			"')\n",
+			"orm",
+			"error",
+			"#",
+			"cv2",
+			"hyper",
+			"neat",
+			"population",
+			"population of",
+			"average adjusted fitness",
+			"plot_stats",
+			"lint",
+			"python",
+			"net.png",
+			"retro.import",
+			"-snes",
+			".fences",
+			"track",
+			"raw",
+			"command",
+			"command view",
+			"command document",
+			"resources",
+			"Devart.Data.PostgreSql.dll",
+			"devart",
+			"Task \"Message\"",
+			"message",
+			"C:\\\\tmp\\\\wbdeploy",
+			"DeployFolder",
+			"compiledassembly",
+			"1.2.3.4",
+			"compiledass",
+			"beforebuild",
+			"LatestVersion",
+			"1.2.3.4",
+			"\r",
+			"*.",
+			"richiesto",
+			".",
+			"extension",
+			"weldsui.dll",
+			"terminologia",
+			"report20",
+			"report",
+			"e1MinHour",
+			"saldature",
+			"not up",
+			"change",
+			" ",
+			"Test",
+			"Elenco",
+			"HashTable"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" ",
+			"",
+			"<0x0d><0x0a>",
+			"\n",
+			" \n",
+			"Hashtable"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 46.0
+	},
+	"input":
+	{
+		"height": 52.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Terminus":
+	{
+		"height": 430.0
+	},
+	"output.Terminus 2":
+	{
+		"height": 262.0
+	},
+	"output.Terminus 3":
+	{
+		"height": 464.0
+	},
+	"output.Terminus 4":
+	{
+		"height": 258.0
+	},
+	"output.Terminus Build Results":
+	{
+		"height": 484.0
+	},
+	"output.exec":
+	{
+		"height": 501.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 138.0
+	},
+	"pinned_build_system": "",
+	"project": "docker scripts.sublime-project",
+	"replace":
+	{
+		"height": 88.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 373.6,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 1530.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 301.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

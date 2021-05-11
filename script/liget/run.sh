@@ -1,0 +1,1 @@
+docker run --detach --name liget-server -p 9011:9011 --env-file liget.env -v "$(pwd)/liget-data:/data" tomzo/liget:latest

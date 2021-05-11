@@ -1,0 +1,1 @@
+docker stop --time=120 CLANexus

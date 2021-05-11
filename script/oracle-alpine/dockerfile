@@ -1,0 +1,4 @@
+FROM cosmomill/alpine-oracle-xe
+
+# Optional, set SYSDBA password
+ENV SYSDBA_PWD password
