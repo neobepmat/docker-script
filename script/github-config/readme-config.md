@@ -1,8 +1,5 @@
 # Connect Git to Github account
 
-usr: cla-operation
-pwd: PinocchioELaFatina
-
 - Checking for existing SSH keys
 > $ ls -al ~/.ssh
 > Lists the files in your .ssh directory, if they exist
