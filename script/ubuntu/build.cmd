@@ -1,1 +1,1 @@
-docker build -t ruttolibero .
+docker build -t ubutest .
