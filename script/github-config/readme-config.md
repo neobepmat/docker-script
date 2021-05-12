@@ -1,30 +1,33 @@
 # Connect Git to Github account
 
+usr: cla-operation
+pwd: PinocchioELaFatina
+
 - Checking for existing SSH keys
 > $ ls -al ~/.ssh
 > Lists the files in your .ssh directory, if they exist
 
-- Generating a new SSH Key
-> $ ssh-keygen -t ed25519 -C "your_email@example.com"
-
-specifying mail address of github account
+- Generating a new SSH Key specifying mail address of your github account
+> $ ssh-keygen -t ed25519 -C "operations.github@cl2001.it"
 
 - Adding your SSH key to the ssh-agent
 > start the ssh-agent in the background
 > $ eval `ssh-agent -s`
 
-add you private key
+- adding the private key
 > ssh-add ~/.ssh/id_ed25519
 
-- Copy the SSH public key to your clipboard.
-> clip < ~/.ssh/id_ed25519.pub
+- Copying the SSH public key to your clipboard.
+> Linux:    clip < ~/.ssh/id_ed25519.pub
+> Windows:  clip.exe < ~/.ssh/id_ed25519.pub
 
-- Add the public key to Github account
+- Adding the public key to Github account
+> click on your Profile --> Settings --> _SSH and GPG Keys_ --> New SS Key
 
 # Commit to GitHub
 
-> git config --global user.email "giggiweb@yahoo.it"
-> git config --global user.name "giuseppe grilli"
+> git config --global user.email "operations.github@cl2001.it"
+> git config --global user.name "Operations GitHub"
 
 > git add "modified-file"
 
