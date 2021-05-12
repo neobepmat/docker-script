@@ -1,1 +1,0 @@
-docker volume create --name nexus-data
