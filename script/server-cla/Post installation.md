@@ -29,9 +29,15 @@ https://docs.docker.com/engine/install/linux-postinstall/
 - installing Nexus (Binary Artifacts Repository), creating folder for docker volume
 > mkdir /dock/nexus
 
+- set chmod per /dock folder
+> sudo chown root:docker /dock -R
+
 - set permissions for /dock folder
 > sudo chmod 777 /dock -R
 
+- creating volume folder for Nexus OSS
+> mkdir /dock/nexus
+ 
 - running nexus docker
 > bash /home/docker-scripts/docker-scripts/scripts/nexus/runNexus.sh
 
@@ -51,7 +57,13 @@ docker run --restart always --detach --name CLANexus -p 8081:8081 --env-file nex
 > docker ps -a
 
 - checking docker logs
-> docker logs <dockerId>
+> docker logs <Container Id>
 
 - inspecting docker configuration
-> docker inspect <dockerId> 
+> docker inspect <Container Id> 
+
+- change admin password
+> usr: admin
+> pwd: password
+
+
