@@ -66,4 +66,23 @@ docker run --restart always --detach --name CLANexus -p 8081:8081 --env-file nex
 > usr: admin
 > pwd: password
 
+- NEXUS OSS configuration
+> adding user giuseppe.grilli
+> pwd: password
+> 
+> adding new role: nx-develop
+> to add api-key, to view everyting on website
+> 
+> generating new api-key for giuseppe.grilli
+> 883eb132-10a8-3b98-9235-2c87d4437ee0
+> 
+> nuget setapikey 883eb132-10a8-3b98-9235-2c87d4437ee0 -source http://docker-01:8081/repository/{repository name}/
+> 
+> adding user patrick.nani
+> pwd: password
+> 
+> generating new api-key for patrick.nani
+> 98a583b5-8f26-3d5d-9218-77ce544bea4e
+> 
+> nuget setapikey 98a583b5-8f26-3d5d-9218-77ce544bea4e -source http://docker-01:8081/repository/{repository name}/
 

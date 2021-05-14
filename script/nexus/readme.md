@@ -103,3 +103,22 @@ Register for Nuget config
 
 Seting user and password
 > nuget sources add -Name "CLANexus" -Source "http://localhost:8081/repository/nuget-hosted/" -username "giuseppe.grilli" -password "DelfinoCurioso2020"
+
+## CLA Nexus configuration
+
+> admin password: password
+> giuseppe.grilli password: password
+
+Register for Nuget config
+> nuget setapikey 883eb132-10a8-3b98-9235-2c87d4437ee0 -source http://docker-01:8081/repository/nuget-hosted/
+
+Seting user and password
+> nuget sources add -Name "CLADockerNexus" -Source "http://docker-01:8081/repository/nuget-hosted/" -username "giuseppe.grilli" -password "password"
+
+## Example of Push command
+> nuget.exe push -source CLADockerNexus mypackage.1.0.0.nupkg
+
+## Creating stand-alone nuget packages
+Download and install Nuget Package Explorer
+
+> https://github.com/NuGetPackageExplorer/NuGetPackageExplorer
