@@ -86,3 +86,21 @@ docker run --restart always --detach --name CLANexus -p 8081:8081 --env-file nex
 > 
 > nuget setapikey 98a583b5-8f26-3d5d-9218-77ce544bea4e -source http://docker-01:8081/repository/{repository name}/
 
+- Gitlab volume folder creation
+> creating folder /dock/gitlab
+> sudo chown root:docker gitlab/ -R
+> sudo chmod 777 gitlab/ -R
+
+- Gitlab docker container installation
+> gitlab/docker run
+
+- Gitlab re-configure URL how to
+> https://docs.gitlab.com/omnibus/settings/configuration.html
+
+- Gitlab after 1st installation
+> creating password for user "root" (in our case "password")
+> changing email for root username
+
+- LDAP configuration
+> https://docs.gitlab.com/ee/administration/auth/ldap/
+> https://github.com/shamithmc/gitlab-docker/blob/master/doc/settings/ldap.md
