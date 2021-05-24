@@ -104,3 +104,6 @@ docker run --restart always --detach --name CLANexus -p 8081:8081 --env-file nex
 - LDAP configuration
 > https://docs.gitlab.com/ee/administration/auth/ldap/
 > https://github.com/shamithmc/gitlab-docker/blob/master/doc/settings/ldap.md
+
+The LDAP configuration detailed documentation can be found within the file
+> gitlab/LDAP config.md
