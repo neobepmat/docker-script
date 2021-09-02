@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  pg13test:
+    container_name: pg13test
+    image: "bitnami/postgresql:13.4.0-debian-10-r19"
+    deploy:
+      restart_policy:
+        condition: any
+        delay: 5s
+        max_attempts: never give up
+        window: 120s
+    ports:
+      - "5432:5433"
+    volumes:
+      - /Docker/pg13test:/var/lib/postgresql/data
+    env_file: .pg13testenv

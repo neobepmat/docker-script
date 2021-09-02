@@ -1,0 +1,4 @@
+# PostgreSQL 13 TEST Environment variables
+POSTGRES_USER=dbuser
+POSTGRES_PASSWORD=admin2021
+POSTGRES_DB=todoapp
