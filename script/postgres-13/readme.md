@@ -18,5 +18,23 @@ We choose the Debian image docker, published from Bitnami
 
 ## TOC
 
-- docker-compose.yml
-    + yaml script for docker compose
+### Postgres 13 setup
+- 000-create-folder-for-tablespaces.sh
+    + bash script to create folder for tablespaces on Postgres data folder, SharpPlant database
+- 010-create-tablespaces.sql
+    + psql script for tablespaces creation, SharpPlant database
+- 020-create-roles.sql
+    + psql script for roles creation, SharpPlant database
+- docker-compose-pg13test.yml
+    + docker compose for Postgres 13 TEST
+- pg13testenv
+    + environment variables for Postgres 13 TEST
+
+### Miscellaneous
+- docker-commands.md
+    + commands to compose, execute script inside container
+- postgres-commands.md
+    + to use psql inside/outside the container
+- readme.md
+    + this file
+
