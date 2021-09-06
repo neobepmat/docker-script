@@ -14,8 +14,12 @@ Every folder represents a different image/container, hereunder the list of the a
     + Binary Artifacts Repository, Nuget-Rpm-Npm etc..
 - oracle-alpine
     + Instructions for docker container based on Oracle X11 complete with SQL DDL to create tablespaces, users and special configuration to be used with SharpPlant Builder
+- postgres-13
+    + docker container Postgres 13 on Debian 
 - postgres-9.6-alpine, postgres-9.6.21
     + docker container to run Postgres 9.6 in Linux container
+- postgres-9.6-debian
+    + docker container to run Postgres 9.6 in Linux Debian 10.9 container
 - python2-7
     + docker container to run linux image for python 2.7
 - ubuntu
@@ -28,3 +32,5 @@ The _Nexus_ folder also includes a detailed README on how to configure Nexus, ho
 The _github-config_ folder includes all the required steps to assign a GITHUB account and configure a GIT client with a SSH pair of keys to authenticate git push & pull operations.
 
 The _server-cla_ includes files and notes of post installations steps executed while installing and configuring the Linux Server in CLA organization.
+
+The _cladb80_ includes files and notes of post installations steps executed while installing and configuring the _CLADB80_ Postgres 13 Server in CLA organization.
