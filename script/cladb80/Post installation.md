@@ -106,7 +106,7 @@ From the folder
 > ~/dockr-scripts/script/cladb80
 
 Copy in the folder /Docker/pg13conf the files:
-> postgresql.conf
+> postgresql.auto.conf
 
 Set chmod
 > sudo chown 1001:docker /Docker/pg13conf -R
@@ -137,6 +137,17 @@ Copy in the folder /Docker/pg13-init the files
 Set chmod per Docker volume folders (Bitnami image runs as non-root user uid 1001)
 > sudo chown 1001:docker /Docker/pg13-preinit -R
 > sudo chown 1001:docker /Docker/pg13-init -R
+---
+
+From the folder
+> ~/dockr-scripts/script/cladb80
+
+Copy in the folder /Docker/pg13conf the files:
+> postgresql.auto.conf
+
+Set chmod
+> sudo chown 1001:docker /Docker/pg13conf -R
+---
 
 change directory to
 > ~/docker-scripts/script/postgres-13
