@@ -1,9 +1,0 @@
-cd /bitnami/postgresql;
-mkdir BOD_TACO_TBS.NDF;
-mkdir TACO_M00A.DBF;
-mkdir TACO_M00B.DBF;
-mkdir TACO_M01A.DBF;
-mkdir TACO_M01B.DBF;
-mkdir TACO_M04A.DBF;
-mkdir TACO_M04B.DBF;
-mkdir TACO_U.DBF;

@@ -25,8 +25,12 @@ We choose the Debian image docker, published from Bitnami
     + psql script for tablespaces creation, SharpPlant database
 - 020-create-roles.sql
     + psql script for roles creation, SharpPlant database
+- docker-compose-pg13.yml
+    + docker compose for Postgres 13 PRODUCTION
 - docker-compose-pg13test.yml
     + docker compose for Postgres 13 TEST
+- pg13env
+    + environment variables for Postgres 13 PRODUCTION
 - pg13testenv
     + environment variables for Postgres 13 TEST
 
