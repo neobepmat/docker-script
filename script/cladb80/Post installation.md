@@ -84,6 +84,21 @@ cloning GIT repository in _administrator_ HOME folder, a new folder _docker-scri
 > git clone git@github.com:cla-operation/docker-script.git docker-scripts
 ---
 
+## Installing PostgreSQL 13 Client
+
+Adding Postgres public key
+> wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+Adding PostgreSQL 13 Repository
+> echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/postgresql-pgdg.list > /dev/null
+
+Refreshing apt metadata
+> sudo apt update
+
+Updating postgres packages
+> sudo apt list --upgradable;
+> sudo apt upgrade;
+---
 
 ## Initializing the TEST container for PostgreSQL 13
 
