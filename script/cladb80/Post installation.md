@@ -103,7 +103,7 @@ Set chmod per Docker volume folders (Bitnami image runs as non-root user uid 100
 ---
 
 From the folder
-> ~/dockr-scripts/script/cladb80
+> ~/docker-scripts/script/cladb80/pg13
 
 Copy in the folder /Docker/pg13conf the files:
 > postgresql.auto.conf
@@ -140,7 +140,7 @@ Set chmod per Docker volume folders (Bitnami image runs as non-root user uid 100
 ---
 
 From the folder
-> ~/dockr-scripts/script/cladb80
+> ~/docker-scripts/script/cladb80/pg13
 
 Copy in the folder /Docker/pg13conf the files:
 > postgresql.auto.conf
@@ -170,7 +170,7 @@ Creating folder for postgres 9
 >   data files folder for Postgres 9
 > mkdir /Docker/pg9script
 > mkdir /Docker/pg9script/init
-> mkdir /Docker/pg9script/pre-init
+> mkdir /Docker/pg9script/preinit
 >   script folder for Postgres 9
 
 set chmod per Docker volume folders (Bitnami image runs as non-root user uid 1001)
@@ -194,6 +194,17 @@ Copy in the folder /Docker/pg9script/init the files
 
 Set chmod per Docker volume folders (Bitnami image runs as non-root user uid 1001)
 > sudo chown 1001:docker /Docker/pg9script -R
+---
+
+From the folder
+> ~/dockr-scripts/script/cladb80/pg9
+
+Copy in the folder /Docker/pg9conf the files:
+> postgresql.auto.conf
+
+Set chmod
+> sudo chown 1001:docker /Docker/pg9conf -R
+---
 
 change directory to
 > ~/docker-scripts/script/postgres-9.6-debian
