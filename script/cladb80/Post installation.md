@@ -63,15 +63,12 @@ Creating folder for postgres 13 test & production docker volume as root:root
 >   script folder for bash script
 > mkdir /Docker/pg13-init
 >   script folder for bash and sql script
-> mkdir /Docker/pg13conf
->   script folder for postgresql.conf
 
 set chmod per Docker volume folders (Bitnami image runs as non-root user uid 1001)
 > sudo chown 1001:docker /Docker/pg13test -R
 > sudo chown 1001:docker /Docker/pg13 -R
 > sudo chown 1001:docker /Docker/pg13-preinit -R
 > sudo chown 1001:docker /Docker/pg13-init -R
-> sudo chown 1001:docker /Docker/pg13conf -R
 
 set permissions for Docker volume folders
 > sudo chmod 777 /Docker -R
@@ -112,19 +109,15 @@ Copy in the folder /Docker/pg13-init the files
 > 010-create-tablespaces.sql
 > 020-create-roles.sql
 
+From the folder 
+> ~/docker-scripts/script/cladb80/pg13conf
+
+Copy in the folder /Docker/pg13-preinit the files:
+> 100-alter-system.sql
+
 Set chmod per Docker volume folders (Bitnami image runs as non-root user uid 1001)
 > sudo chown 1001:docker /Docker/pg13-preinit -R
 > sudo chown 1001:docker /Docker/pg13-init -R
----
-
-From the folder
-> ~/docker-scripts/script/cladb80/pg13
-
-Copy in the folder /Docker/pg13conf the files:
-> postgresql.auto.conf
-
-Set chmod
-> sudo chown 1001:docker /Docker/pg13conf -R
 ---
 
 change directory to
@@ -149,19 +142,15 @@ Copy in the folder /Docker/pg13-init the files
 > 010-create-tablespaces.sql
 > 020-create-roles.sql
 
+From the folder 
+> ~/docker-scripts/script/cladb80/pg13conf
+
+Copy in the folder /Docker/pg13-preinit the files:
+> 100-alter-system.sql
+
 Set chmod per Docker volume folders (Bitnami image runs as non-root user uid 1001)
 > sudo chown 1001:docker /Docker/pg13-preinit -R
 > sudo chown 1001:docker /Docker/pg13-init -R
----
-
-From the folder
-> ~/docker-scripts/script/cladb80/pg13
-
-Copy in the folder /Docker/pg13conf the files:
-> postgresql.auto.conf
-
-Set chmod
-> sudo chown 1001:docker /Docker/pg13conf -R
 ---
 
 change directory to
@@ -174,7 +163,7 @@ in case of success a new container labelled as _pg13_ should be up and running
 
 ---
 
-## Benchmarks Tests - PostgreSQL 9.6
+## Initializing the container for PostgreSQL 9
 
 This section includes all the commands and settings to produce a PostgreSQL container with 9.6 version and to perform comparison tests with PostgreSQL 13
 
@@ -194,8 +183,7 @@ set chmod per Docker volume folders (Bitnami image runs as non-root user uid 100
 
 set permissions for Docker volume folders
 > sudo chmod 777 /Docker -R
-
-### Initializing the container for PostgreSQL 9
+---
 
 From the folder 
 > ~/docker-scripts/script/postgres-common-scripts
