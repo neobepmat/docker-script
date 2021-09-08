@@ -6,10 +6,8 @@ services:
     image: "bitnami/postgresql:13.4.0-debian-10-r19"
     ports:
       - "6432:5432"
-      - "6433:5433"
     volumes:
       - /Docker/pg13test:/bitnami/postgresql
       - /Docker/pg13-init:/docker-entrypoint-initdb.d
       - /Docker/pg13-preinit:/docker-entrypoint-preinitdb.d
-      - /Docker/pg13conf/:/bitnami/postgresql/conf/
     env_file: pg13testenv
