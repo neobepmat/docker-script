@@ -1,0 +1,287 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20210909095324
+Username: CTXFARM\Geronimo_24
+RunAs User: CTXFARM\Geronimo_24
+Configuration Name: 
+Machine: RASA-RD-01 (Microsoft Windows NT 10.0.17763.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\Temp\benchlog\benchmarking-pg13test.ps1'
+Process ID: 10728
+PSVersion: 5.1.17763.2090
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.2090
+BuildVersion: 10.0.17763.2090
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Temp\benchlog\cladb80-pg13test-benchlog.txt
+starting vacuum...end.
+progress: 5.0 s, 807.2 tps, lat 12.201 ms stddev 12.746
+progress: 10.0 s, 871.4 tps, lat 11.494 ms stddev 6.970
+progress: 15.0 s, 867.4 tps, lat 11.532 ms stddev 7.426
+progress: 20.0 s, 734.0 tps, lat 13.587 ms stddev 15.375
+progress: 25.0 s, 706.6 tps, lat 14.187 ms stddev 17.080
+progress: 30.0 s, 734.4 tps, lat 13.615 ms stddev 17.625
+progress: 35.0 s, 845.9 tps, lat 11.819 ms stddev 7.715
+progress: 40.0 s, 833.3 tps, lat 12.002 ms stddev 7.478
+progress: 45.0 s, 853.5 tps, lat 11.716 ms stddev 7.167
+progress: 50.0 s, 863.8 tps, lat 11.574 ms stddev 7.156
+progress: 55.0 s, 791.9 tps, lat 12.621 ms stddev 7.676
+progress: 60.0 s, 635.3 tps, lat 15.737 ms stddev 9.762
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 47731
+latency average = 12.559 ms
+latency stddev = 10.908 ms
+tps = 795.256660 (including connections establishing)
+tps = 795.413365 (excluding connections establishing)
+starting vacuum...end.
+progress: 5.0 s, 601.0 tps, lat 16.471 ms stddev 10.401
+progress: 10.0 s, 735.6 tps, lat 13.593 ms stddev 8.107
+progress: 15.0 s, 744.8 tps, lat 13.419 ms stddev 7.837
+progress: 20.0 s, 716.4 tps, lat 13.947 ms stddev 14.680
+progress: 25.0 s, 843.9 tps, lat 11.867 ms stddev 7.266
+progress: 30.0 s, 829.7 tps, lat 12.051 ms stddev 7.650
+progress: 35.0 s, 786.4 tps, lat 12.711 ms stddev 8.494
+progress: 40.0 s, 815.6 tps, lat 12.264 ms stddev 7.525
+progress: 45.0 s, 808.8 tps, lat 12.363 ms stddev 14.265
+progress: 50.0 s, 835.4 tps, lat 11.967 ms stddev 7.565
+progress: 55.0 s, 842.2 tps, lat 11.875 ms stddev 7.153
+progress: 60.0 s, 825.8 tps, lat 12.104 ms stddev 7.774
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 46937
+latency average = 12.775 ms
+latency stddev = 9.393 ms
+tps = 781.960970 (including connections establishing)
+tps = 782.070603 (excluding connections establishing)
+starting vacuum...end.
+progress: 5.0 s, 794.0 tps, lat 12.435 ms stddev 8.129
+progress: 10.0 s, 794.0 tps, lat 12.601 ms stddev 7.814
+progress: 15.0 s, 784.2 tps, lat 12.755 ms stddev 8.452
+progress: 20.0 s, 807.7 tps, lat 12.379 ms stddev 7.509
+progress: 25.0 s, 802.6 tps, lat 12.457 ms stddev 7.706
+progress: 30.0 s, 810.6 tps, lat 12.334 ms stddev 7.628
+progress: 35.0 s, 852.4 tps, lat 11.735 ms stddev 7.367
+progress: 40.0 s, 826.6 tps, lat 12.090 ms stddev 7.446
+progress: 45.0 s, 789.0 tps, lat 12.672 ms stddev 13.783
+progress: 50.0 s, 800.2 tps, lat 12.501 ms stddev 11.201
+progress: 55.0 s, 843.6 tps, lat 11.849 ms stddev 7.560
+progress: 60.0 s, 844.6 tps, lat 11.838 ms stddev 7.583
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 48759
+latency average = 12.297 ms
+latency stddev = 8.699 ms
+tps = 812.266321 (including connections establishing)
+tps = 812.406414 (excluding connections establishing)
+starting vacuum...end.
+progress: 5.0 s, 789.2 tps, lat 12.539 ms stddev 7.752
+progress: 10.0 s, 802.1 tps, lat 12.471 ms stddev 7.367
+progress: 15.0 s, 735.1 tps, lat 13.608 ms stddev 14.523
+progress: 20.0 s, 890.8 tps, lat 11.222 ms stddev 7.145
+progress: 25.0 s, 909.5 tps, lat 10.997 ms stddev 6.719
+progress: 30.0 s, 912.0 tps, lat 10.963 ms stddev 6.406
+progress: 35.0 s, 888.5 tps, lat 11.255 ms stddev 6.975
+progress: 40.0 s, 887.4 tps, lat 11.270 ms stddev 6.914
+progress: 45.0 s, 896.4 tps, lat 11.158 ms stddev 7.062
+progress: 50.0 s, 889.4 tps, lat 11.243 ms stddev 6.933
+progress: 55.0 s, 911.7 tps, lat 10.961 ms stddev 6.628
+progress: 60.0 s, 884.9 tps, lat 11.301 ms stddev 7.201
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 51993
+latency average = 11.532 ms
+latency stddev = 7.815 ms
+tps = 866.325649 (including connections establishing)
+tps = 866.441708 (excluding connections establishing)
+starting vacuum...end.
+progress: 5.0 s, 884.2 tps, lat 11.215 ms stddev 10.071
+progress: 10.0 s, 855.6 tps, lat 11.678 ms stddev 13.451
+progress: 15.0 s, 933.6 tps, lat 10.716 ms stddev 6.742
+progress: 20.0 s, 891.6 tps, lat 11.208 ms stddev 7.244
+progress: 25.0 s, 905.4 tps, lat 11.050 ms stddev 8.163
+progress: 30.0 s, 902.8 tps, lat 11.077 ms stddev 6.872
+progress: 35.0 s, 895.7 tps, lat 11.163 ms stddev 7.360
+progress: 40.0 s, 901.0 tps, lat 11.101 ms stddev 6.856
+progress: 45.0 s, 922.2 tps, lat 10.841 ms stddev 6.940
+progress: 50.0 s, 902.8 tps, lat 11.075 ms stddev 7.289
+progress: 55.0 s, 846.0 tps, lat 11.818 ms stddev 13.648
+progress: 60.0 s, 882.9 tps, lat 11.326 ms stddev 9.288
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 53626
+latency average = 11.182 ms
+latency stddev = 8.927 ms
+tps = 893.516696 (including connections establishing)
+tps = 893.624882 (excluding connections establishing)
+starting vacuum...end.
+progress: 5.0 s, 900.9 tps, lat 10.949 ms stddev 6.737
+progress: 10.0 s, 890.9 tps, lat 11.227 ms stddev 7.179
+progress: 15.0 s, 921.4 tps, lat 10.851 ms stddev 6.393
+progress: 20.0 s, 903.2 tps, lat 11.067 ms stddev 6.923
+progress: 25.0 s, 842.2 tps, lat 11.878 ms stddev 10.146
+progress: 30.0 s, 752.4 tps, lat 13.292 ms stddev 14.864
+progress: 35.0 s, 898.4 tps, lat 11.124 ms stddev 6.937
+progress: 40.0 s, 867.7 tps, lat 11.529 ms stddev 7.274
+progress: 45.0 s, 843.2 tps, lat 11.860 ms stddev 9.524
+progress: 50.0 s, 905.5 tps, lat 11.042 ms stddev 6.485
+progress: 55.0 s, 885.2 tps, lat 11.295 ms stddev 7.228
+progress: 60.0 s, 911.4 tps, lat 10.968 ms stddev 6.358
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 52628
+latency average = 11.392 ms
+latency stddev = 8.223 ms
+tps = 876.790800 (including connections establishing)
+tps = 876.965630 (excluding connections establishing)
+starting vacuum...end.
+progress: 5.0 s, 813.6 tps, lat 12.118 ms stddev 13.685
+progress: 10.0 s, 841.2 tps, lat 11.881 ms stddev 7.402
+progress: 15.0 s, 835.1 tps, lat 11.979 ms stddev 7.461
+progress: 20.0 s, 704.2 tps, lat 14.192 ms stddev 18.343
+progress: 25.0 s, 721.4 tps, lat 13.857 ms stddev 8.058
+progress: 30.0 s, 692.9 tps, lat 14.437 ms stddev 11.360
+progress: 35.0 s, 759.0 tps, lat 13.173 ms stddev 7.756
+progress: 40.0 s, 696.9 tps, lat 14.343 ms stddev 9.015
+progress: 45.0 s, 641.4 tps, lat 15.594 ms stddev 9.328
+progress: 50.0 s, 613.2 tps, lat 16.294 ms stddev 9.556
+progress: 55.0 s, 744.4 tps, lat 13.435 ms stddev 8.709
+progress: 60.0 s, 787.4 tps, lat 12.706 ms stddev 14.847
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 44262
+latency average = 13.542 ms
+latency stddev = 11.034 ms
+tps = 737.494921 (including connections establishing)
+tps = 737.647129 (excluding connections establishing)
+starting vacuum...end.
+progress: 5.0 s, 875.6 tps, lat 11.314 ms stddev 7.079
+progress: 10.0 s, 884.0 tps, lat 11.312 ms stddev 7.056
+progress: 15.0 s, 824.4 tps, lat 12.126 ms stddev 10.823
+progress: 20.0 s, 873.8 tps, lat 11.443 ms stddev 6.940
+progress: 25.0 s, 897.2 tps, lat 11.148 ms stddev 6.982
+progress: 30.0 s, 902.3 tps, lat 11.084 ms stddev 6.820
+progress: 35.0 s, 871.2 tps, lat 11.464 ms stddev 7.086
+progress: 40.0 s, 807.4 tps, lat 12.388 ms stddev 13.551
+progress: 45.0 s, 864.0 tps, lat 11.580 ms stddev 7.085
+progress: 50.0 s, 845.6 tps, lat 11.824 ms stddev 7.764
+progress: 55.0 s, 865.4 tps, lat 11.552 ms stddev 8.843
+progress: 60.0 s, 871.0 tps, lat 11.477 ms stddev 7.241
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 51924
+latency average = 11.550 ms
+latency stddev = 8.289 ms
+tps = 864.947691 (including connections establishing)
+tps = 865.061468 (excluding connections establishing)
+starting vacuum...end.
+progress: 5.0 s, 881.8 tps, lat 11.211 ms stddev 6.953
+progress: 10.0 s, 816.8 tps, lat 12.239 ms stddev 7.373
+progress: 15.0 s, 837.0 tps, lat 11.950 ms stddev 14.106
+progress: 20.0 s, 880.2 tps, lat 11.359 ms stddev 7.263
+progress: 25.0 s, 900.7 tps, lat 11.096 ms stddev 7.018
+progress: 30.0 s, 885.8 tps, lat 11.290 ms stddev 7.253
+progress: 35.0 s, 854.8 tps, lat 11.699 ms stddev 8.641
+progress: 40.0 s, 890.2 tps, lat 11.232 ms stddev 6.879
+progress: 45.0 s, 865.6 tps, lat 11.556 ms stddev 17.149
+progress: 50.0 s, 848.8 tps, lat 11.779 ms stddev 13.485
+progress: 55.0 s, 904.9 tps, lat 11.046 ms stddev 6.611
+progress: 60.0 s, 904.8 tps, lat 11.057 ms stddev 6.573
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 52363
+latency average = 11.449 ms
+latency stddev = 9.703 ms
+tps = 872.505369 (including connections establishing)
+tps = 872.650340 (excluding connections establishing)
+starting vacuum...end.
+progress: 5.0 s, 903.7 tps, lat 10.968 ms stddev 6.802
+progress: 10.0 s, 858.2 tps, lat 11.652 ms stddev 7.283
+progress: 15.0 s, 717.9 tps, lat 13.929 ms stddev 8.513
+progress: 20.0 s, 772.2 tps, lat 12.938 ms stddev 7.994
+progress: 25.0 s, 678.1 tps, lat 14.752 ms stddev 8.612
+progress: 30.0 s, 796.4 tps, lat 12.559 ms stddev 13.908
+progress: 35.0 s, 861.0 tps, lat 11.619 ms stddev 7.234
+progress: 40.0 s, 861.8 tps, lat 11.595 ms stddev 7.207
+progress: 45.0 s, 845.0 tps, lat 11.839 ms stddev 7.521
+progress: 50.0 s, 835.8 tps, lat 11.957 ms stddev 7.480
+progress: 55.0 s, 888.4 tps, lat 11.264 ms stddev 7.001
+progress: 60.0 s, 872.6 tps, lat 11.458 ms stddev 6.871
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 49469
+latency average = 12.124 ms
+latency stddev = 8.248 ms
+tps = 824.109281 (including connections establishing)
+tps = 824.204902 (excluding connections establishing)
+starting vacuum...end.
+progress: 5.0 s, 826.8 tps, lat 11.930 ms stddev 13.637
+progress: 10.0 s, 861.8 tps, lat 11.603 ms stddev 7.318
+progress: 15.0 s, 869.8 tps, lat 11.498 ms stddev 7.400
+progress: 20.0 s, 864.2 tps, lat 11.572 ms stddev 7.320
+progress: 25.0 s, 807.4 tps, lat 12.378 ms stddev 7.353
+progress: 30.0 s, 835.8 tps, lat 11.977 ms stddev 11.828
+progress: 35.0 s, 803.9 tps, lat 12.434 ms stddev 7.917
+progress: 40.0 s, 465.4 tps, lat 21.476 ms stddev 61.174
+progress: 45.0 s, 757.6 tps, lat 13.206 ms stddev 8.276
+progress: 50.0 s, 764.2 tps, lat 13.074 ms stddev 8.351
+progress: 55.0 s, 758.8 tps, lat 13.187 ms stddev 7.580
+progress: 60.0 s, 688.7 tps, lat 14.519 ms stddev 15.782
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 46532
+latency average = 12.887 ms
+latency stddev = 16.749 ms
+tps = 774.905217 (including connections establishing)
+tps = 775.055107 (excluding connections establishing)
+**********************
+Windows PowerShell transcript end
+End time: 20210909100425
+**********************

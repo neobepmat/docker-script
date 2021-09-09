@@ -1,0 +1,120 @@
+﻿scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 47731
+latency average = 12.559 ms
+latency stddev = 10.908 ms
+tps = 795.256660 (including connections establishing)
+tps = 795.413365 (excluding connections establishing)
+
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 46937
+latency average = 12.775 ms
+latency stddev = 9.393 ms
+tps = 781.960970 (including connections establishing)
+tps = 782.070603 (excluding connections establishing)
+
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 48759
+latency average = 12.297 ms
+latency stddev = 8.699 ms
+tps = 812.266321 (including connections establishing)
+tps = 812.406414 (excluding connections establishing)
+
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 51993
+latency average = 11.532 ms
+latency stddev = 7.815 ms
+tps = 866.325649 (including connections establishing)
+tps = 866.441708 (excluding connections establishing)
+
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 53626
+latency average = 11.182 ms
+latency stddev = 8.927 ms
+tps = 893.516696 (including connections establishing)
+tps = 893.624882 (excluding connections establishing)
+
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 52628
+latency average = 11.392 ms
+latency stddev = 8.223 ms
+tps = 876.790800 (including connections establishing)
+tps = 876.965630 (excluding connections establishing)
+
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 44262
+latency average = 13.542 ms
+latency stddev = 11.034 ms
+tps = 737.494921 (including connections establishing)
+tps = 737.647129 (excluding connections establishing)
+
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 51924
+latency average = 11.550 ms
+latency stddev = 8.289 ms
+tps = 864.947691 (including connections establishing)
+tps = 865.061468 (excluding connections establishing)
+
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 52363
+latency average = 11.449 ms
+latency stddev = 9.703 ms
+tps = 872.505369 (including connections establishing)
+tps = 872.650340 (excluding connections establishing)
+
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 49469
+latency average = 12.124 ms
+latency stddev = 8.248 ms
+tps = 824.109281 (including connections establishing)
+tps = 824.204902 (excluding connections establishing)
+
+scaling factor: 1
+query mode: simple
+number of clients: 10
+number of threads: 2
+duration: 60 s
+number of transactions actually processed: 46532
+latency average = 12.887 ms
+latency stddev = 16.749 ms
+tps = 774.905217 (including connections establishing)
+tps = 775.055107 (excluding connections establishing)
