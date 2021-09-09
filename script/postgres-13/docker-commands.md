@@ -10,6 +10,9 @@ Creating container with compose yaml not default filename
 docker-compose -f <docker compose not default filename>.yml up
 ```
 
+Rebuilding container after modifications on docker-compose file
+>docker-compose -f <docker compose not default filename>.yml up -d --no-deps --build <service_name>
+
 For PostgreSQL 13 TEST:
 > docker-compose -f docker-compose-pg13test.yml up -d
 ---
