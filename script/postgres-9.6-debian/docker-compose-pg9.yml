@@ -10,4 +10,5 @@ services:
       - /Docker/pg9:/bitnami/postgresql
       - /Docker/pg9script/init:/docker-entrypoint-initdb.d
       - /Docker/pg9script/preinit:/docker-entrypoint-preinitdb.d
+      - /Docker/pg9/conf/:/bitnami/postgresql/conf/
     env_file: pg9env
