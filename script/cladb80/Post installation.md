@@ -131,6 +131,9 @@ change directory to
 execute the Docker Compose command to initialize the PostgresSQL 13 TEST
 > docker-compose -f docker-compose-pg13test.yml -p pg13test up -d
 
+or rebuild it
+> docker-compose -f docker-compose-pg13test.yml -p pg13test up -d --no-deps --build
+
 in case of success a new container labelled as _pg13test_ should be up and running
 
 ---
@@ -164,6 +167,9 @@ change directory to
 
 execute the Docker Compose command to initialize the PostgresSQL 13 TEST
 > docker-compose -f docker-compose-pg13.yml -p pg13 up -d 
+
+or rebuild it
+> docker-compose -f docker-compose-pg13.yml -p pg13 up -d --no-deps --build
 
 in case of success a new container labelled as _pg13_ should be up and running
 
