@@ -10,6 +10,9 @@ Restore CLA for PG13 TEST
 Restore CLA-DEV for PG13 TEST
 > export PGPASSWORD=<%password%>; pg_restore --host localhost --port 6432 --username "postgres" --dbname "CLA-DEV" --role "TACO" --no-password  --verbose <%filename%>;
 
+Restore CLA-INT for PG13 TEST
+> export PGPASSWORD=<%password%>; pg_restore --host localhost --port 6432 --username "postgres" --dbname "CLA-INT" --role "TACO" --no-password  --verbose <%filename%>;
+
 Restore STREICHER-TEST TACO for PG13 TEST
 > export PGPASSWORD=<%password%>; pg_restore --host localhost --port 6432 --username "postgres" --dbname "STREICHER-TEST" --role "TACO" --no-password  --verbose <%filename%>;
 
