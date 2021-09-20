@@ -4,6 +4,8 @@ services:
   pg13:
     container_name: pg13
     image: "bitnami/postgresql:13.4.0-debian-10-r19"
+    mem_limit: 10g
+    mem_reservation: 1g    
     ports:
       - "5432:5432"
     volumes:
