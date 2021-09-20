@@ -1,4 +1,4 @@
-# Oracle Alpine Docker image 
+# Oracle Alpine Docker image
 Base image to build a container for Oracle XE.
 
 URL for base image:
