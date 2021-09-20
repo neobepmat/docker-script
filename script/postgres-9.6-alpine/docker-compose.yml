@@ -3,6 +3,8 @@ services:
   build:
   database:
     image: "postgres:9.6-alpine"
+    mem_limit: 3g
+    mem_reservation: 256m
     env_file:
       - database.env
     ports:
