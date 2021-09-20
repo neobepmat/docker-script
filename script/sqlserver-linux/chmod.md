@@ -1,0 +1,1 @@
+chmod ugo+x ./docker-run.sh
