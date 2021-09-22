@@ -4,6 +4,9 @@ Every command has been executed logged as _administrator_ user.
 
 We refer to _administrator_ HOME when ~ appears in commands and scripts.
 
+The Post Installation log includes also the file
+> Post installation - Part Two.md
+
 ---
 
 ## System commands
