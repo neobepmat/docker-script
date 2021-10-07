@@ -107,3 +107,23 @@ docker run --restart always --detach --name CLANexus -p 8081:8081 --env-file nex
 
 The LDAP configuration detailed documentation can be found within the file
 > gitlab/LDAP config.md
+---
+
+## Configuration update (24-09-2021)
+
+The containers, CLAGitlab & CLANexus have been set to limit the memory usage.
+
+```CLAGitlab memory reservation
+--memory=10g \
+--memory_reservation=5g \
+```
+
+```CLANexus memory reservation
+--memory=6g \
+--memory_reservation=4g \
+```
+---
+
+## Nexus OSS Update (24-09-2021)
+
+The container has been updated to 3.34.0 release
