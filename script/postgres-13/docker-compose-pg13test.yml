@@ -14,3 +14,4 @@ services:
       - /Docker/pg13-preinit:/docker-entrypoint-preinitdb.d
       - /Docker/pg13conf/:/bitnami/postgresql/conf/
     env_file: pg13testenv
+    restart: always

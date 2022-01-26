@@ -6,6 +6,7 @@ docker run --name sql2019e \
 --memory-swap="5g" \
 --memory-reservation="4g" \
 --memory-swappiness="0" \
+--restart always \
 -p 9433:1433 \
 --volume /Docker/sqlsrvr2019e/data/system:/var/opt/mssql \
 --volume /Docker/sqlsrvr2019e/data/user:/var/opt/sqlserver \
