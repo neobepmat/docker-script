@@ -5,7 +5,7 @@ services:
     container_name: pg9
     image: "docker.io/bitnami/postgresql:9.6"
     restart: always
-    mem_limit: 6g
+    mem_limit: 4g
     mem_reservation: 256m
     ports:
       - "7432:5432"
