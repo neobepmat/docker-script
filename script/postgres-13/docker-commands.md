@@ -17,6 +17,11 @@ For PostgreSQL 13 TEST:
 > docker-compose -f docker-compose-pg13test.yml up -d
 ---
 
+For PostgreSQL 13 LOCAL:
+> docker-compose -f docker-compose-pg13-local.yml up -d
+---
+
+
 Running shell script inside docker container
 > cat local_file.sh | docker exec -i container_name bash
 ---
