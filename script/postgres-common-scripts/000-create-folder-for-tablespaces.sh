@@ -1,3 +1,5 @@
+mkdir -p /usr/pg_basebackup/usr_tblspcs;
+
 cd /bitnami/postgresql;
 
 create_directory () {

@@ -1,0 +1,1 @@
+pg13-master 5432 Abcd1234 /Docker/pg/pg13-master-basebackup replicator replication_slot_slave1 /usr/pg/usr_tblspcs
