@@ -1,0 +1,5 @@
+# PostgreSQL 13 Alpha-Beta Environment variables
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=Abcd1234
+
+BITNAMI_DEBUG=true
