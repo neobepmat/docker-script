@@ -9,11 +9,11 @@ Settings are available for Master and Slave
 - pg-master
 	+ settings for MASTER
 	+ file format:
-		* "hostname" "postgres port" "password for postgres user" "local folder where pgbasebackup result is stored"
+		* "hostname" "postgres port" "password for postgres user" "Replication Slot" "PGDATA folder"
 - pg-slave
 	+ settings for SLAVE
 	+ file format:
-		* "hostname" "postgres port" "password for postgres user" "PGDATA folder"
+		* "hostname" "postgres port" "password for postgres user" "PGDATA folder" "TABLESPACES folder"
 
 ## Files
 
@@ -32,6 +32,14 @@ Further information on sql and config files are available into the file _create-
 SQL scripts are generally available into the folder _script/postgres-common-scripts_.
 	
 
+## Building the SLAVE image
+
+The dockerfile to build SLAVE image is the file:
+> dockerfile-slave
+
+The command to build and tag the SLAVE image is:
+> docker build -t pg13-slave:%version% -f dockerfile-slave .
+
 ## Miscellaneous
 
 The Log Level for internal server messages has been set to DEBUG5 for MASTER and SLAVE either.
@@ -43,6 +51,7 @@ Set the executable flag of the scripts
 ```language
 chmod ugo+x docker-master.sh
 chmod ugo+x docker-slave.sh
+chmod ugo+x docker-slave-customimage.sh
 chmod ugo+x create-network.sh
 chmod ugo+x create-folders.sh
 chmod ugo+x remove-slave-db.sh
@@ -75,18 +84,18 @@ pg_basebackup with the plain format will try to save tablespaces in the same pla
 
 For M04 tables, hereunder the list of existing tablespaces:
 ```language
-"/usr/pg/user_tablespaces/BOD_TACO_TBS.NDF";
-"/usr/pg/user_tablespaces/TACO_M00A.DBF";
-"/usr/pg/user_tablespaces/TACO_M00B.DBF";
-"/usr/pg/user_tablespaces/TACO_M01A.DBF";
-"/usr/pg/user_tablespaces/TACO_M01B.DBF";
-"/usr/pg/user_tablespaces/TACO_M04A.DBF";
-"/usr/pg/user_tablespaces/TACO_M04B.DBF";
-"/usr/pg/user_tablespaces/TACO_U.DBF";
+"/usr/pg/usr_tblspcs/BOD_TACO_TBS.NDF";
+"/usr/pg/usr_tblspcs/TACO_M00A.DBF";
+"/usr/pg/usr_tblspcs/TACO_M00B.DBF";
+"/usr/pg/usr_tblspcs/TACO_M01A.DBF";
+"/usr/pg/usr_tblspcs/TACO_M01B.DBF";
+"/usr/pg/usr_tblspcs/TACO_M04A.DBF";
+"/usr/pg/usr_tblspcs/TACO_M04B.DBF";
+"/usr/pg/usr_tblspcs/TACO_U.DBF";
 ```
 
 These tablespaces are relocated in the folder
-> /usr/pg_basebackup/user_tablespaces/
+> /usr/pg_basebackup/usr_tblspcs/
 
 Perform a basebackup with tablespaces relocation
-> pg_basebackup -D /basebackup -S replication_slot_slave1 -X stream -P -U replicator -Fp -R --tablespace-mapping=/usr/pg/user_tablespaces/BOD_TACO_TBS.NDF=/usr/pg_basebackup/user_tablespaces/BOD_TACO_TBS.NDF --tablespace-mapping=/usr/pg/user_tablespaces/TACO_M00A.DBF=/usr/pg_basebackup/user_tablespaces/TACO_M00A.DBF --tablespace-mapping=/usr/pg/user_tablespaces/TACO_M01A.DBF=/usr/pg_basebackup/user_tablespaces/TACO_M01A.DBF --tablespace-mapping=/usr/pg/user_tablespaces/TACO_M01B.DBF=/usr/pg_basebackup/user_tablespaces/TACO_M01B.DBF --tablespace-mapping=/usr/pg/user_tablespaces/TACO_M04A.DBF=/usr/pg_basebackup/user_tablespaces/TACO_M04A.DBF --tablespace-mapping=/usr/pg/user_tablespaces/TACO_M04B.DBF=/usr/pg_basebackup/user_tablespaces/TACO_M04B.DBF --tablespace-mapping=/usr/pg/user_tablespaces/TACO_U.DBF=/usr/pg_basebackup/user_tablespaces/TACO_U.DBF
+> pg_basebackup -D /basebackup -S replication_slot_slave1 -X stream -P -U replicator -Fp -R --tablespace-mapping=/usr/pg/usr_tblspcs/BOD_TACO_TBS.NDF=/usr/pg/usr_tblspcs/BOD_TACO_TBS.NDF --tablespace-mapping=/usr/pg/usr_tblspcs/TACO_M00A.DBF=/usr/pg/usr_tblspcs/TACO_M00A.DBF --tablespace-mapping=/usr/pg/usr_tblspcs/TACO_M01A.DBF=/usr/pg/usr_tblspcs/TACO_M01A.DBF --tablespace-mapping=/usr/pg/usr_tblspcs/TACO_M01B.DBF=/usr/pg/usr_tblspcs/TACO_M01B.DBF --tablespace-mapping=/usr/pg/usr_tblspcs/TACO_M04A.DBF=/usr/pg/usr_tblspcs/TACO_M04A.DBF --tablespace-mapping=/usr/pg/usr_tblspcs/TACO_M04B.DBF=/usr/pg/usr_tblspcs/TACO_M04B.DBF --tablespace-mapping=/usr/pg/usr_tblspcs/TACO_U.DBF=/usr/pg/usr_tblspcs/TACO_U.DBF
