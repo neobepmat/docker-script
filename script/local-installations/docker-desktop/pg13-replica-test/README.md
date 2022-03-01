@@ -9,6 +9,8 @@ This test creates two different Postgres instances.
 The MASTER has a listening port on 6432, the SLAVE on the port 7432.
 For internal communication both containers use the default postgres TCP port 5432.
 
+For this example, the user tablespaces are relocated in the PGDATA folder for the MASTER and within the path */usr/pg/usr_tblspcs* for the SLAVE.
+
 ## Settings
 Settings are available for Master and Slave
 

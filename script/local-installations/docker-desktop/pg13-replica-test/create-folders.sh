@@ -24,7 +24,7 @@ cp ./pg-slave $PG_FOLDER/pg13-settings;
 
 echo MASTER ---------------------------------
 echo Copy shell and sql script for MASTER - INIT
-cp scripts/000-create-folder-for-tablespaces.sh $PG_FOLDER/pg13-master-init;
+cp scripts/000-init-master.sh $PG_FOLDER/pg13-master-init;
 cp scripts/010-create-tablespaces.sql $PG_FOLDER/pg13-master-init;
 cp scripts/020-create-roles.sql $PG_FOLDER/pg13-master-init;
 cp scripts/030-replica-settings-master.sql $PG_FOLDER/pg13-master-init;
@@ -33,14 +33,8 @@ echo Copy configuration scripts
 cp conf/master/pg-hba-master.conf $PG_FOLDER/pg13-master-conf/pg_hba.conf
 
 
-echo SLAVE ---------------------------------
-echo Copy shell script for SLAVE - INIT
-cp scripts/000-init-slave.sh $PG_FOLDER/pg13-slave-init;
-
-
 echo Set shell scripts as executable
-chmod ugo+x $PG_FOLDER/pg13-master-init/000-create-folder-for-tablespaces.sh;
-chmod ugo+x $PG_FOLDER/pg13-slave-init/000-init-slave.sh;
+chmod ugo+x $PG_FOLDER/pg13-master-init/000-init-master.sh;
 
 
 echo Setting user and group to folder
