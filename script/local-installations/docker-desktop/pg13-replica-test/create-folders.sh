@@ -6,16 +6,15 @@ mkdir -p $PG_FOLDER;
 mkdir -p $PG_FOLDER/pg13-master-init;
 mkdir -p $PG_FOLDER/pg13-slave-init;
 
-mkdir -p $PG_FOLDER/pg13-master-preinit;
-mkdir -p $PG_FOLDER/pg13-slave-preinit;
-
 mkdir -p $PG_FOLDER/pg13-master;
 mkdir -p $PG_FOLDER/pg13-slave;
 
-mkdir -p $PG_FOLDER/pg13-master-conf/conf.d;
-mkdir -p $PG_FOLDER/pg13-slave-conf/conf.d;
+mkdir -p $PG_FOLDER/pg13-master-conf;
+mkdir -p $PG_FOLDER/pg13-slave-conf;
 
 mkdir -p $PG_FOLDER/pg13-settings;
+
+mkdir -p $PG_FOLDER/pg13-archive;
 
 
 echo Copy settings file
@@ -23,29 +22,19 @@ cp ./pg-master $PG_FOLDER/pg13-settings;
 cp ./pg-slave $PG_FOLDER/pg13-settings;
 
 
-echo Copy sql script for MASTER
-cp ../../../postgres-common-scripts/010-create-tablespaces-nopgdata.sql $PG_FOLDER/pg13-master-init;
-cp ../../../postgres-common-scripts/020-create-roles.sql $PG_FOLDER/pg13-master-init;
-cp ../../../postgres-common-scripts/030-replica-settings-master.sql $PG_FOLDER/pg13-master-init;
-
-# echo Copy sql script for SLAVE
-# cp ../../../postgres-common-scripts/020-create-roles.sql $PG_FOLDER/pg13-slave-init;
-
-
-echo Copy shell script for MASTER
-cp ../../../postgres-common-scripts/000-create-folder-for-tablespaces-nopgdata.sh $PG_FOLDER/pg13-master-preinit;
-
-
-echo Copy shell script for SLAVE
-cp ../../../postgres-common-scripts/000-init-slave.sh $PG_FOLDER/pg13-slave-preinit;
-
+echo MASTER ---------------------------------
+echo Copy shell and sql script for MASTER - INIT
+cp scripts/000-init-master.sh $PG_FOLDER/pg13-master-init;
+cp scripts/010-create-tablespaces.sql $PG_FOLDER/pg13-master-init;
+cp scripts/020-create-roles.sql $PG_FOLDER/pg13-master-init;
+cp scripts/030-replica-settings-master.sql $PG_FOLDER/pg13-master-init;
 
 echo Copy configuration scripts
-cp pg13conf-master/pg-hba-master.conf $PG_FOLDER/pg13-master-conf/pg_hba.conf
-cp pg13conf-master/conf.d/pg-master.conf $PG_FOLDER/pg13-master-conf/conf.d/pg-master.conf
+cp conf/master/pg-hba-master.conf $PG_FOLDER/pg13-master-conf/pg_hba.conf
 
 
-#cp pg13conf-slave/conf.d/pg-slave.conf $PG_FOLDER/pg13-slave-conf/conf.d/pg-slave.conf
+echo Set shell scripts as executable
+chmod ugo+x $PG_FOLDER/pg13-master-init/000-init-master.sh;
 
 
 echo Setting user and group to folder
