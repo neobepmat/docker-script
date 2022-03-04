@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/tianon/gosu/releases/tag/1.14
+HostUrl=https://objects.githubusercontent.com/github-production-release-asset-2e65be/19708981/82f5cda4-dad5-4537-ace2-fb61e8c1a25a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20220224%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220224T233709Z&X-Amz-Expires=300&X-Amz-Signature=10372bea27e0a3653a564c202f0bedbe193dbb9aa7d053dba6bb337ac664736a&X-Amz-SignedHeaders=host&actor_id=10119521&key_id=0&repo_id=19708981&response-content-disposition=attachment%3B%20filename%3Dgosu-amd64&response-content-type=application%2Foctet-stream
