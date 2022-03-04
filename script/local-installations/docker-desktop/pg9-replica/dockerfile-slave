@@ -1,0 +1,13 @@
+FROM postgres:9.6
+
+ENV GOSU_VERSION 1.10
+
+ADD bin/gosu-amd64 /usr/bin/gosu
+
+RUN chmod +x /usr/bin/gosu
+
+COPY scripts/slave/setup-slave.sh /docker-entrypoint.sh
+
+RUN chmod +x /docker-entrypoint.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
