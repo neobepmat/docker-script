@@ -1,4 +1,4 @@
-PG_FOLDER=/Docker/pg9
+PG_FOLDER=/home/beppe/DockerVolume/pg9
 
 echo Creating folders for data, configuration and basebackup
 mkdir -p $PG_FOLDER;

@@ -69,7 +69,7 @@ The Log Level for internal server messages has been set to DEBUG5 for MASTER and
 
 Set the executable flag of the scripts
 ```language
-chmod ugo+x ./docker-master-customimage.sh;
+chmod ugo+x ./docker-master.sh;
 chmod ugo+x ./docker-slave-customimage.sh;
 chmod ugo+x ./create-network.sh;
 chmod ugo+x ./create-folders.sh;
@@ -82,11 +82,8 @@ Create the docker network
 Create the volume structure and copy the sh,sql scripts
 > sudo ./create-folders.sh
 
-Building the custom docker image pg9-master
-> docker build -t pg9-master:%version% -f dockerfile-master .
-
 Initializing the MASTER container
-> ./docker-master-customimage.sh
+> ./docker-master.sh
 
 Building the custom docker image pg13-slave
 > docker build -t pg9-slave:%version% -f dockerfile-slave .
