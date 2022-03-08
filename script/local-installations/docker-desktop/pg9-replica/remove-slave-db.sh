@@ -1,4 +1,4 @@
-PG_FOLDER=/home/beppe/DockerVolume/pg9
+PG_FOLDER=/Docker/pg9
 
 echo Removing SLAVE folders database, configuration
 rm -rf $PG_FOLDER/pg-slave;
