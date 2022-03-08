@@ -1,0 +1,1 @@
+pg9-master 5432 Abcd1234 replicator replication_slot_slave1 /var/lib/postgresql/data /var/lib/postgresql/data

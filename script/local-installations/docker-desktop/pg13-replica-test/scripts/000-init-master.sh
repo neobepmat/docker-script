@@ -47,3 +47,5 @@ host    replication     all              0.0.0.0/0              trust
 host    replication     replicator      0.0.0.0/0              trust
 host all all all md5
 EOF
+
+chown postgres:postgres /archive -R
