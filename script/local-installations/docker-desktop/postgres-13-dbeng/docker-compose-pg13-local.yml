@@ -9,7 +9,7 @@ services:
       - "6432:5432"
     env_file: pg13localenv
     volumes:
-      - /Docker/pg13:/bitnami/postgresql
+      - /Docker/pg13/data:/bitnami/postgresql
+      - /Docker/pg13/conf/:/bitnami/postgresql/conf/
       - ./shell.sh:/docker-entrypoint-preinitdb.d/shell.sh
       - ./scripts.sql:/docker-entrypoint-initdb.d/script.sql
-      - /Docker/pg13conf/:/bitnami/postgresql/conf/
