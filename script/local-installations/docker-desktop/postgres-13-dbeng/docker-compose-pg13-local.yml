@@ -13,3 +13,4 @@ services:
       - /Docker/pg13/conf/:/bitnami/postgresql/conf/
       - ./shell.sh:/docker-entrypoint-preinitdb.d/shell.sh
       - ./scripts.sql:/docker-entrypoint-initdb.d/script.sql
+      
