@@ -4,14 +4,14 @@ services:
   pg9:
     container_name: pg9
     image: "docker.io/bitnami/postgresql:9.6"
-    restart: always
     mem_limit: 2g
     mem_reservation: 256m
     ports:
       - "7432:5432"
     volumes:
-      - /Docker/pg9:/bitnami/postgresql
-      - /Docker/pg9script/init:/docker-entrypoint-initdb.d
-      - /Docker/pg9script/preinit:/docker-entrypoint-preinitdb.d
-      - /Docker/pg9script/conf/:/bitnami/postgresql/conf/
+      - /docker/pg/pg9-data:/bitnami/postgresql
+      - /docker/pg/pg9-init:/docker-entrypoint-initdb.d
+      - /docker/pg/pg9-preinit:/docker-entrypoint-preinitdb.d
+      - /docker/pg/pg9-conf/:/bitnami/postgresql/conf/
     env_file: pg9env
+    restart: always
