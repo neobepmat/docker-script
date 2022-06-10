@@ -13,10 +13,12 @@ Options details:
 ## Creating volume folders
 
 Create the folders:
-> mkdir /Docker/sqlsrvr2019e
-> mkdir /Docker/sqlsrvr2019e/data
-> mkdir /Docker/sqlsrvr2019e/data/system
-> mkdir /Docker/sqlsrvr2019e/data/user
+```
+mkdir /Docker/sqlsrvr2019e;
+mkdir /Docker/sqlsrvr2019e/data;
+mkdir /Docker/sqlsrvr2019e/data/system;
+mkdir /Docker/sqlsrvr2019e/data/user;
+```
 
 Modify owner ad group
 > sudo chown 10001:docker sqlsrvr2019e/ -R
