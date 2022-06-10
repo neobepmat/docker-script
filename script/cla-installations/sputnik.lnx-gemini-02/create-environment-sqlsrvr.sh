@@ -1,4 +1,4 @@
-PG_FOLDER=/docker/pg
+PG_FOLDER=/docker/sqlsrvr
 
 echo Creating folders for data, configuration and basebackup
 mkdir -p $PG_FOLDER;
