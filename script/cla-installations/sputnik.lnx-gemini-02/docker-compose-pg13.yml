@@ -3,15 +3,15 @@ services:
   
   pg13:
     container_name: pg13
-    image: "bitnami/postgresql:13.4.0-debian-10-r19"
-    mem_limit: 4g
-    mem_reservation: 1g    
+    image: "bitnami/postgresql:13.7.0-debian-11-r3" 
+    mem_limit: 2g
+    mem_reservation: 256m    
     ports:
       - "6432:5432"
     volumes:
-      - /Docker/pg/pg13-data:/bitnami/postgresql
-      - /Docker/pg/pg13-init:/docker-entrypoint-initdb.d
-      - /Docker/pg/pg13-preinit:/docker-entrypoint-preinitdb.d
-      - /Docker/pg/pg13-conf/:/bitnami/postgresql/conf/
+      - /docker/pg/pg13-data:/bitnami/postgresql
+      - /docker/pg/pg13-init:/docker-entrypoint-initdb.d
+      - /docker/pg/pg13-preinit:/docker-entrypoint-preinitdb.d
+      - /docker/pg/pg13-conf/:/bitnami/postgresql/conf/
     env_file: pg13env
     restart: always
