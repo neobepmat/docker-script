@@ -7,11 +7,11 @@ services:
     mem_limit: 4g
     mem_reservation: 1g    
     ports:
-      - "5432:5432"
+      - "6432:5432"
     volumes:
-      - /Docker/pg13:/bitnami/postgresql
-      - /Docker/pg13-init:/docker-entrypoint-initdb.d
-      - /Docker/pg13-preinit:/docker-entrypoint-preinitdb.d
-      - /Docker/pg13conf/:/bitnami/postgresql/conf/
+      - /Docker/pg/pg13-data:/bitnami/postgresql
+      - /Docker/pg/pg13-init:/docker-entrypoint-initdb.d
+      - /Docker/pg/pg13-preinit:/docker-entrypoint-preinitdb.d
+      - /Docker/pg/pg13-conf/:/bitnami/postgresql/conf/
     env_file: pg13env
     restart: always
