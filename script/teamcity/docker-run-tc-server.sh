@@ -6,4 +6,4 @@ docker run
 -u 1000:1000 \
 --volume /Docker/teamcity/data:/data/teamcity_server/datadir \
 --volume /Docker/teamcity/logs:/opt/teamcity/logs \
-jetbrains/teamcity-server
+jetbrains/teamcity-server:2022.04.1
