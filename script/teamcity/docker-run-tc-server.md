@@ -2,8 +2,8 @@ docker run
 -it \
 -d \
 --name teamcity \
--u root \
--v /Docker/tc/data:/data/teamcity_server/datadir \
--v /Docker/tc/logs:/opt/teamcity/logs \
--p 8111:8111 \
-jetbrains/teamcity-minimal-agent:2021.1.3
+--publish 8111:8111 \
+-u 1000:1000 \
+--volume /Docker/teamcity/data:/data/teamcity_server/datadir \
+--volume /Docker/teamcity/logs:/opt/teamcity/logs \
+jetbrains/teamcity-server
