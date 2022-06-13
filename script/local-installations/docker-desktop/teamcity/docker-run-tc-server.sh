@@ -1,4 +1,4 @@
-docker run 
+docker run \
 -it \
 -d \
 --name teamcity \
