@@ -7,4 +7,4 @@ mkdir -p $TC_FOLDER/data;
 mkdir -p $TC_FOLDER/logs;
 
 echo Setting user and group to folder
-chown 1000:1000 $TC_FOLDER -R;
+chown -R 1000:1000 $TC_FOLDER
