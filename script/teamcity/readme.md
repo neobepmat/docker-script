@@ -1,23 +1,29 @@
-# README
+# Team City scripts, readme and templates
+
+https://github.com/JetBrains/teamcity-docker-images/blob/master/dockerhub/teamcity-server/README.md
 
 This document includes all the specifications related to the setup / installation of TeamCity on top of Docker container.
 
-These scripts allow to create:
-- a TeamcCity server
-- 1 or more Team City agents, separated in Linux and Windows platform
+These scripts allow you to create:
+- a TeamCity server
+- 1 or more Team City agents, for Linux and Windows platform
 
 ## Server Configuration
 
+The script is
+> docker-run-tc-server.md
+
 The release used at the moment of the creation of this file is:
-> jetbrains/teamcity-server:2021.1.3
+> jetbrains/teamcity-server:2022.04.1
 
 The Teamcity Docker container is configured to be executed with these specs:
 - port 8111, the tcp port where Teamcity is listening
 - volumes
 	+ for data dir
-		* /Docker/teamcity/data
+		* e.g. /dock/teamcity/data
 	+ for logs
-		* /Docker/teamcity/logs
+		* e.g. /dock/teamcity/logs
+- the user uid:gid, 1000:1000
 
 
 ## Client Configuration
@@ -28,7 +34,7 @@ The file
 and
 > docker-run-tc-agent-win-template.md
 
-are template yaml to create an agent for Linux or Windows platform.
+are yaml templates to create an agent for Linux or Windows platform.
 
 To use them you need to:
 - change the <% Agent Name %> on the container name and in the volume path for every agent deployed
