@@ -1,0 +1,40 @@
+version: '3.9'
+
+services:
+  teamcity:
+    image: jetbrains/teamcity-server:2022.04.1
+    restart: always
+    user: "${UID}:${GID}"
+    networks:
+      - web
+      - default
+    volumes:
+      - "${TC_DATA}:/data/teamcity_server/datadir"
+      - "${TC_LOGS}:/opt/teamcity/logs"
+    ports:
+      - "8111"
+    depends_on:
+      - pg_teamcity
+    env_file: .env
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  pg_teamcity:
+    build: ./postgres
+    restart: always
+    volumes:
+      - "${PG_DATA}:/var/lib/postgresql/data"
+      - "${PG_BACKUP}:/backups"
+    env_file: .env
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+networks:
+  web:
+    external: true
