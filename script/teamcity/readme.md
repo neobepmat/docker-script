@@ -1,5 +1,7 @@
 # Team City scripts, readme and templates
 
+https://github.com/JetBrains/teamcity-docker-images/blob/master/dockerhub/teamcity-server/README.md
+
 This document includes all the specifications related to the setup / installation of TeamCity on top of Docker container.
 
 These scripts allow you to create:
