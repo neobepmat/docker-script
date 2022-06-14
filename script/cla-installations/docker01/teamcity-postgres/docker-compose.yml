@@ -17,7 +17,7 @@ services:
     env_file: .env
     labels:
       - "traefik.enable=true"
-      - "traefik.backend=server"
+      - "traefik.backend=teamcity"
       - "traefik.frontend.rule=Host:docker-01.cla.cl-grp.local"
       - "traefik.docker.network=web"
       - "traefik.port=8111"
