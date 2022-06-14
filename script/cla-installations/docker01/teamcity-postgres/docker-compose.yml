@@ -18,7 +18,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.backend=teamcity"
-      - "traefik.frontend.rule=Host:teamcity.cla.cl-grp.local"
+      - "traefik.frontend.rule=Host:docker-01.cla.cl-grp.local"
       - "traefik.docker.network=web"
       - "traefik.port=8111"
     logging:
