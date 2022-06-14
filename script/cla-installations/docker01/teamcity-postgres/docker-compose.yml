@@ -53,7 +53,7 @@ services:
       - --docker.exposedByDefault=false
       - --docker.domain=docker.localhost
       - --defaultEntryPoints=http
-      - --entryPoints=Name:http Address::80
+      - --entryPoints=Name:http Address::808
     ports:
       - "808:80"
     networks:
