@@ -18,9 +18,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.backend=server"
-    # VIRTUAL_HOST for local case should be localhost
-    # if you wanna nossl version for non local case... no, you don't
-      - "traefik.frontend.rule=Host:localhost"
+      - "traefik.frontend.rule=Host:docker-01.cla.cl-grp.local"
       - "traefik.docker.network=web"
       - "traefik.port=8111"
     logging:
@@ -53,7 +51,7 @@ services:
       - --docker.exposedByDefault=false
       - --docker.domain=docker.localhost
       - --defaultEntryPoints=http
-      - --entryPoints=Name:http Address::80
+      - --entryPoints=Name:http Address::808
     ports:
       - "808:80"
     networks:
