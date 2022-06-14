@@ -3,7 +3,6 @@ version: '3.9'
 services:
   teamcity:
     image: jetbrains/teamcity-server:2022.04.1
-    restart: always
     user: "${UID}:${GID}"
     networks:
       - web
@@ -16,6 +15,14 @@ services:
     depends_on:
       - pg_teamcity
     env_file: .env
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=server"
+    # VIRTUAL_HOST for local case should be localhost
+    # if you wanna nossl version for non local case... no, you don't
+      - "traefik.frontend.rule=Host:localhost"
+      - "traefik.docker.network=web"
+      - "traefik.port=8111"
     logging:
       driver: json-file
       options:
@@ -24,11 +31,35 @@ services:
 
   pg_teamcity:
     build: ./postgres
-    restart: always
     volumes:
       - "${PG_DATA}:/var/lib/postgresql/data"
       - "${PG_BACKUP}:/backups"
     env_file: .env
+    labels:
+      - "traefik.enable=false"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  traefik:
+    image: traefik:1.7-alpine
+    restart: on-failure
+    command:
+      - --logLevel=ERROR
+      - --docker
+      - --docker.watch=true
+      - --docker.exposedByDefault=false
+      - --docker.domain=docker.localhost
+      - --defaultEntryPoints=http
+      - --entryPoints=Name:http Address::80
+    ports:
+      - "808:80"
+    networks:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     logging:
       driver: json-file
       options:
