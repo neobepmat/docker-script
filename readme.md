@@ -26,10 +26,18 @@ Every folder represents a different image/container, hereunder the list of the a
     + docker container to use alpine linux distribution
 - baget
     + Nuget Server
+- cla-installations
+    + docker installations on cla environment
+- common-bin
+    + common bin files useful to be used in docker environment
 - gitlab
     + container for Gitlab installation, based on Gitlab Community Edition
+- kubernetes
+    + minikube installation with readme and legenda
 - liget
     + Nuget server fork of Baget
+- local-installations
+    + local WSL 2 / Docker Desktop installations
 - nexus
     + Binary Artifacts Repository, Nuget-Rpm-Npm etc..
 - oracle-alpine
@@ -40,10 +48,20 @@ Every folder represents a different image/container, hereunder the list of the a
     + docker container to run Postgres 9.6 in Linux container
 - postgres-9.6-debian
     + docker container to run Postgres 9.6 in Linux Debian 10.9 container
+- postgres-common-scripts
+    + bash scripts, sql scripts useful for docker postgres containers
 - python2-7
     + docker container to run linux image for python 2.7
+- postgres13-pgbouncer
+    + template for postgres 13 and pgbouncer in docker
 - sqlserver-linux
     + instructions to configure and install a Docker container for Sql Server 2019 Express Edition
+- svn-server
+    + local SVN Server based on Apache Subversion
+- teamcity
+    + templates for local teamcity installation
+- teamcity-postgres
+    + templates for teamcity-postgres-trafik installation
 - ubuntu
     + docker container to run Ubuntu for test purposes
 
