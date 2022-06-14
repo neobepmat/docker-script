@@ -12,3 +12,12 @@ The bind mounts and Postgres credentials are specified in the environment file
 
 The Postgres database server is installed from a DockerFile from the folder 
 > ./postgres
+
+
+## Build
+
+docker-compose -f docker-compose.yml build
+
+## Create containers
+
+docker-compose -f docker-compose.yml up -d
