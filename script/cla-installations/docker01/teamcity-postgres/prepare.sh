@@ -15,3 +15,6 @@ mkdir -p $TC_FOLDER/postgres/pg_backup;
 
 echo Setting user and group to folder
 chown -R 1000:1000 $TC_FOLDER/teamcity;
+
+# creating network for docker
+docker network create web;
