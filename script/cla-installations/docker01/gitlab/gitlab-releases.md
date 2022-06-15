@@ -4,10 +4,9 @@
 
 https://docs.gitlab.com/ee/policy/maintenance.html#upgrade-recommendations
 
-## Docker-01 migration
+## Docker-01 migration, Upgrade Path to the 15
 
-- 13.12.15	ok
-- 14.0.2	ok
+13.12.15 -> 14.0.12 -> 14.3.6 => 14.6.2 -> 14.9.5 -> 14.10.4 -> 15.0.2
 
 
 ## Gitlab Releases
