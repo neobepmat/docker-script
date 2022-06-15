@@ -15,12 +15,6 @@ services:
     depends_on:
       - pg_teamcity
     env_file: .env
-    labels:
-      - "traefik.enable=true"
-      - "traefik.backend=teamcity"
-      - "traefik.frontend.rule=Host:docker-01.cla.cl-grp.local:8082"
-      - "traefik.docker.network=web"
-      - "traefik.port=8111"
     logging:
       driver: json-file
       options:
@@ -35,29 +29,6 @@ services:
     env_file: .env
     labels:
       - "traefik.enable=false"
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "5"
-
-  traefik:
-    image: traefik:1.7-alpine
-    restart: on-failure
-    command:
-      - --logLevel=ERROR
-      - --docker
-      - --docker.watch=true
-      - --docker.exposedByDefault=false
-      - --docker.domain=docker.localhost
-      - --defaultEntryPoints=http
-      - --entryPoints=Name:http Address::80
-    ports:
-      - "8082:80"
-    networks:
-      - web
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
     logging:
       driver: json-file
       options:
