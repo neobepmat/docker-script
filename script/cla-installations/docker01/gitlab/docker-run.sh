@@ -9,4 +9,4 @@ docker run \
 --volume /dock/gitlab/config:/etc/gitlab \
 --volume /dock/gitlab/logs:/var/log/gitlab \
 --volume /dock/gitlab/data:/var/opt/gitlab \
-gitlab/gitlab-ce:14.0.2-ce.0
+gitlab/gitlab-ce:14.10.4-ce.0
