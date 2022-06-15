@@ -1,4 +1,4 @@
-TAR_FILENAME=gitlab-backup-`date +%Y%m%d-%H%M%S`;
+TAR_FILENAME=gitlab-backup-`date +%Y%m%d-%H%M%S`.tar;
 GITLAB_FOLDER=/dock/gitlab;
 TAR_FOLDER=/dock;
 
