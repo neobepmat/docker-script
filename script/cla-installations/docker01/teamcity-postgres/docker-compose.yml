@@ -3,6 +3,7 @@ version: '3.9'
 services:
   teamcity:
     image: jetbrains/teamcity-server:2022.04.1
+    restart: always
     user: "${UID}:${GID}"
     networks:
       - web
@@ -23,6 +24,7 @@ services:
 
   pg_teamcity:
     build: ./postgres
+    restart: always
     volumes:
       - "${PG_DATA}:/var/lib/postgresql/data"
       - "${PG_BACKUP}:/backups"
