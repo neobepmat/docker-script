@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  web:
+    image: 'gitlab/gitlab-ce:14.3.0-ce.0'
+    hostname: 'docker-01.cla.cl-grp.local'
+    container_name: CLAGitlab
+    ports:
+      - '8082:80'
+      - '8443:443'
+      - '222:22'
+    volumes:
+      - '/dock/gitlab/config:/etc/gitlab'
+      - '/dock/gitlab/logs:/var/log/gitlab'
+      - '/dock/gitlab/data:/var/opt/gitlab'
