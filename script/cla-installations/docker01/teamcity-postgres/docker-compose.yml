@@ -11,7 +11,7 @@ services:
       - "${TC_DATA}:/data/teamcity_server/datadir"
       - "${TC_LOGS}:/opt/teamcity/logs"
     ports:
-      - "8111"
+      - "8111:8111"
     depends_on:
       - pg_teamcity
     env_file: .env
