@@ -27,8 +27,6 @@ services:
       - "${PG_DATA}:/var/lib/postgresql/data"
       - "${PG_BACKUP}:/backups"
     env_file: .env
-    labels:
-      - "traefik.enable=false"
     logging:
       driver: json-file
       options:
