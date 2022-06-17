@@ -1,3 +1,0 @@
-# PostgreSQL 13 TEST Environment variables
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=Abcd1234

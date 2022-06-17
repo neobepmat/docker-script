@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  
+  pg13:
+    container_name: pg13
+    image: "bitnami/postgresql:13.4.0-debian-10-r19"
+    mem_limit: 5g
+    mem_reservation: 1g    
+    ports:
+      - "5432:5432"
+    volumes:
+      - /Docker/pg13:/bitnami/postgresql
+      - /Docker/pg13-init:/docker-entrypoint-initdb.d
+      - /Docker/pg13-preinit:/docker-entrypoint-preinitdb.d
+      - /Docker/pg13conf/:/bitnami/postgresql/conf/
+    env_file: pg13env
+    restart: always
