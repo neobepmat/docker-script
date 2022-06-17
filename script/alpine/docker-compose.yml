@@ -1,7 +1,0 @@
-version: "3"
-services:
-  testapp:
-    image: 'alpine-test'
-    build: .
-    volumes:
-      - '/home/neobepmat/pippo:/etc'

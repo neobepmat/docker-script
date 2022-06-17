@@ -1,8 +1,0 @@
-FROM ubuntu
- 
-RUN cd /home
-RUN mkdir pippo
-
-WORKDIR /home/pippo
-
-RUN touch thisisafile

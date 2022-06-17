@@ -1,0 +1,1 @@
+docker run --name tcagent -d -e SERVER_URL="172.103.250.40:8111" -v c:/docker/teamcity/agent:C:/BuildAgent/conf jetbrains/teamcity-minimal-agent

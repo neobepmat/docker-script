@@ -1,0 +1,6 @@
+FROM alpine
+RUN mkdir -p /home/neobepmat/test
+
+WORKDIR /home/neobepmat/test
+
+CMD sh

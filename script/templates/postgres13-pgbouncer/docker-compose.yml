@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  
+  pg13:
+    container_name: pg13
+    image: "bitnami/postgresql:13.4.0-debian-10-r19"
+    mem_limit: 2g
+    ports:
+      - "9432:5432"
+    volumes:
+      - /Docker/pg13:/bitnami/postgresql
+      - /Docker/pg13-init:/docker-entrypoint-initdb.d
+      - /Docker/pg13-preinit:/docker-entrypoint-preinitdb.d
+      - /Docker/pg13conf/:/bitnami/postgresql/conf/
+      - /Docker/pg13basebackup:/basebackup
+    env_file: pg13localenv
+
+  pgbouncer:
+    container_name: bouncer
+    depends_on:
+      - pg13
+    dns:
+      - 8.8.8.8
+      - 4.2.2.4
+    restart: always
+    image: pgbouncer/pgbouncer
+    env_file:
+      - pgbouncer-env/pgbouncer.env
+    volumes:
+      - .pgbouncer-env/userlist.txt:/etc/pgbouncer/userlist.txt:ro
+    ports:
+      - "8432:6432"

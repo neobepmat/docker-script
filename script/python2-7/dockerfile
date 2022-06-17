@@ -1,5 +1,0 @@
-FROM python:2.7
-RUN mkdir -p /test
-WORKDIR /test
-COPY wait_service.py /test/
-CMD python wait_service.py
