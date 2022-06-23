@@ -1,4 +1,13 @@
-#Legenda
+# Legenda
+
+- POD
+   + A Kubernetes Pod is a group of one or more Containers, tied together for the purposes of administration and networking.
+
+- DEPLOYMENT
+   + A Kubernetes Deployment checks on the health of your Pod and restarts the Pod's Container if it terminates. Deployments are the recommended way to manage the creation and scaling of Pods.
+
+- Control Plane
+   + The control plane manages the worker nodes and the Pods in the cluster. In production environments, the control plane usually runs across multiple computers and a cluster usually runs multiple nodes, providing fault-tolerance and high availability.
 
 - Operator
    + A Kubernetes operator is a method of packaging, deploying, and managing a Kubernetes application. Is an application-specific controller that extends the functionality of the Kubernetes API to create, configure, and manage instances of complex applications on behalf of a Kubernetes user.
@@ -8,12 +17,6 @@
 
 - DCS
     + Distributed Configuration Store
-    
-- POD
-   + A Kubernetes Pod is a group of one or more Containers, tied together for the purposes of administration and networking.
-   
-- DEPLOYMENT
-   + A Kubernetes Deployment checks on the health of your Pod and restarts the Pod's Container if it terminates. Deployments are the recommended way to manage the creation and scaling of Pods.
    
 - SERVICE
    + By default, the Pod is only accessible by its internal IP address within the Kubernetes cluster. To make a Container accessible from outside the Kubernetes virtual network, you have to expose the Pod as a Kubernetes Service.

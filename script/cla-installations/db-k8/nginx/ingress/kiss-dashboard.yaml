@@ -1,0 +1,10 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kiss-dashboard
+spec:
+  defaultBackend:
+    service:
+      name: kubernetes-dashboard
+      port:
+        number: 443
