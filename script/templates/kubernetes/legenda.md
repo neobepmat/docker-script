@@ -21,6 +21,9 @@
 - SERVICE
    + By default, the Pod is only accessible by its internal IP address within the Kubernetes cluster. To make a Container accessible from outside the Kubernetes virtual network, you have to expose the Pod as a Kubernetes Service.
    
+- Kind
+   + kubernetes cluster useful for testing purposes
+   
 ## ServiceTypes
    
 Kubernetes `ServiceTypes` allow you to specify what kind of Service you want. The default is `ClusterIP`.
