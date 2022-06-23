@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim # Create PVC
+metadata:
+  name: cla-pg-ha-pvc # Sets PVC's name
+  namespace: cla-pg-ha
+  labels:
+    app: cla-pg-ha # Defines app to create PVC for
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Gi # Sets PVC's size

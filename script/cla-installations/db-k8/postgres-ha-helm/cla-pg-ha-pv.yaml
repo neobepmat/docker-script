@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume # Create PV 
+metadata:
+  name: cla-pg-ha-pv # Sets PV name
+  namespace: cla-pg-ha
+  labels:
+    type: local # Sets PV's type
+    app: cla-pg-ha
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 100Gi # Sets PV's size
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/docker/k8/pg" # Sets PV's host path
