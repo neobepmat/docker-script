@@ -1441,7 +1441,7 @@ service:
   ## @param service.ports.postgresql PostgreSQL port
   ##
   ports:
-    postgresql: 30000
+    postgresql: 5432
   ## @param service.portName PostgreSQL service port name
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#multi-port-services
   ##
@@ -1450,7 +1450,7 @@ service:
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
   ##
   nodePorts:
-    postgresql: "5432"
+    postgresql: "30000"
   ## @param service.loadBalancerIP Load balancer IP if service type is `LoadBalancer`
   ## Set the LoadBalancer service type to internal only
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
