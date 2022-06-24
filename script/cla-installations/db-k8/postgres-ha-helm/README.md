@@ -34,6 +34,9 @@ To test the manifest to be deployed
 - @param postgresql.initdbScripts Dictionary of initdb scripts
 	+ {000: ../script/000-create-folder-for-tablespaces-nopgdata.sh, 001: ../script/010-create-tablespaces-nopgdata.sql, 002: ../script/020-create-roles.sql}
 
+- @param persistence.enabled Enable data persistence
+	+ true
+
 - @param persistence.existingClaim A manually managed Persistent Volume and Claim
 	+ cla-pg-ha-pvc
 

@@ -1396,13 +1396,13 @@ volumePermissions:
 persistence:
   ## @param persistence.enabled Enable data persistence
   ##
-  enabled: false
+  enabled: true
   ## @param persistence.existingClaim A manually managed Persistent Volume and Claim
   ## If defined, PVC must be created manually before volume will be bound.
   ## All replicas will share this PVC, using existingClaim with replicas > 1 is only useful in very special use cases.
   ## The value is evaluated as a template.
   ##
-  existingClaim: ""
+  existingClaim: "cla-pg-ha-pvc"
   ## @param persistence.storageClass Persistent Volume Storage Class
   ## If defined, storageClassName: <storageClass>
   ## If set to "-", storageClassName: "", which disables dynamic provisioning
