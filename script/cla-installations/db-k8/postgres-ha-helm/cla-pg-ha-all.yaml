@@ -21,6 +21,14 @@ spec:
     - ReadWriteMany
   hostPath:
     path: "/k8-pv/pg" # Sets PV's host path
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - db-k8
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim # Create PVC
