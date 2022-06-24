@@ -6,11 +6,12 @@ The service is listening on the TCP port 5432
 
 ## Main parameters valid also for Helm
 
-- Application
+- Application Namespace
 	+ cla-pg-ha
 
 The _Persistent Volume_ and _Persistent Volume Claim_ must created manually before deploying the Helm chart
 
+The Persistent Volume has a Node Affinity on _db-node01_ and the folder is _/k8-pv/pg-ha_
 
 ## How top deploy Bitnami Helm chart or PostgreSQL HA
 

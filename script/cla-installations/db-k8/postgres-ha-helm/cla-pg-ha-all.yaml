@@ -15,14 +15,14 @@ metadata:
     app: cla-pg-ha
 spec:
   capacity:
-    storage: 10Gi # Sets PV's size
+    storage: 50Gi # Sets PV's size
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: "/k8-pv/pg" # Sets PV's host path
+    path: "/k8-pv/pg-ha" # Sets PV's host path
   nodeAffinity:
     required:
       nodeSelectorTerms:
@@ -30,7 +30,7 @@ spec:
         - key: kubernetes.io/hostname
           operator: In
           values:
-          - db-k8
+          - db-node01
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim # Create PVC
@@ -45,4 +45,4 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 10Gi # Sets PVC's size
+      storage: 50Gi # Sets PVC's size
