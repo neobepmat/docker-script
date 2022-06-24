@@ -14,7 +14,6 @@ metadata:
     type: local # Sets PV's type
     app: cla-pg-ha
 spec:
-  storageClassName: manual
   capacity:
     storage: 100Gi # Sets PV's size
   accessModes:
@@ -30,7 +29,6 @@ metadata:
   labels:
     app: cla-pg-ha # Defines app to create PVC for
 spec:
-  storageClassName: manual
   accessModes:
     - ReadWriteMany
   resources:
