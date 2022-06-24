@@ -20,9 +20,10 @@ metadata:
   labels:
     app: cla-pg
 data:
-  POSTGRES_DB: appdb
-  POSTGRES_USER: appuser
-  POSTGRES_PASSWORD: Abcd1234
+  POSTGRESQL_USERNAME: userk8
+  POSTGRESQL_PASSWORD: pwdk8
+  POSTGRESQL_DATABASE: TestDatabase
+  POSTGRESQL_POSTGRES_PASSWORD: Abcd1234
 ---
 apiVersion: v1
 kind: PersistentVolume # Create PV 
