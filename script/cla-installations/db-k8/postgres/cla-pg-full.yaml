@@ -74,7 +74,8 @@ metadata:
 spec:
   type: NodePort # Sets the service type
   ports:
-    - port: 30002 # Sets the port to run the postgres application
+    - port: 5432 # Sets the port to run the postgres application
+      nodePort: 30002
   selector:
     app: cla-pg
 ---
@@ -103,7 +104,7 @@ spec:
             - configMapRef:
                 name: cla-pg-secret # Using the ConfigMap postgres-secret
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data
+            - mountPath: /bitnami/postgresql
               name: cla-pg-postgresdata
       volumes:
         - name: cla-pg-postgresdata
