@@ -28,9 +28,6 @@ To test the manifest to be deployed
 - @param postgresql.image.tag PostgreSQL with Repmgr image tag
 	+ 13.7.0-debian-11-r7
 
-- @param postgresql.postgresPassword PostgreSQL password for the `postgres` user when `username` is not `postgres`
-	+ Abcd1234
- 
 - @param postgresql.initdbScripts Dictionary of initdb scripts
 	+ {000: ../script/000-create-folder-for-tablespaces-nopgdata.sh, 001: ../script/010-create-tablespaces-nopgdata.sql, 002: ../script/020-create-roles.sql}
 
@@ -46,3 +43,15 @@ To test the manifest to be deployed
 
 - @param service.nodePorts.postgresql Kubernetes service nodePort
 	+ "6432"
+
+- @param postgresql.repmgrPassword PostgreSQL Repmgr password
+	+ password
+	
+- @param pgpool.adminPassword Pgpool Admin password
+	+ password
+
+- @param postgresql.password PostgreSQL password
+	+ Abcd1234
+
+
+

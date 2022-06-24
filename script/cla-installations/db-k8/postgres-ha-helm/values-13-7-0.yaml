@@ -363,7 +363,7 @@ postgresql:
   ## @param postgresql.database PostgreSQL database
   ##
   username: postgres
-  password: ""
+  password: "Abcd1234"
   database: ""
   ## @param postgresql.existingSecret PostgreSQL password using existing secret
   ##
@@ -371,7 +371,7 @@ postgresql:
   ## @param postgresql.postgresPassword PostgreSQL password for the `postgres` user when `username` is not `postgres`
   ## ref: https://github.com/bitnami/bitnami-docker-postgresql/blob/master/README.md#creating-a-database-user-on-first-run (see note!)
   ##
-  postgresPassword: "Abcd1234"
+  postgresPassword: ""
   ## @param postgresql.usePasswordFile Set to `true` to mount PostgreSQL secret as a file instead of passing environment variable
   ##
   usePasswordFile: ""
@@ -406,7 +406,7 @@ postgresql:
   ## @param postgresql.repmgrChildNodesDisconnectTimeout Repmgr time before node will be fenced when insufficient child nodes are detected (in seconds)
   ##
   repmgrUsername: repmgr
-  repmgrPassword: ""
+  repmgrPassword: "password"
   repmgrDatabase: repmgr
   repmgrLogLevel: NOTICE
   repmgrConnectTimeout: 5
@@ -878,7 +878,7 @@ pgpool:
   ## @param pgpool.adminPassword Pgpool Admin password
   ##
   adminUsername: admin
-  adminPassword: ""
+  adminPassword: "password"
   ## @param pgpool.usePasswordFile Set to `true` to mount pgpool secret as a file instead of passing environment variable
   ##
   usePasswordFile: ""
