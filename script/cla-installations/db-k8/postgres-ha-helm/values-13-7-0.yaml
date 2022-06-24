@@ -1441,7 +1441,7 @@ service:
   ## @param service.ports.postgresql PostgreSQL port
   ##
   ports:
-    postgresql: 5432
+    postgresql: 6432
   ## @param service.portName PostgreSQL service port name
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#multi-port-services
   ##

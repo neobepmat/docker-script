@@ -45,4 +45,4 @@ To test the manifest to be deployed
 	+ NodedPort
 
 - @param service.nodePorts.postgresql Kubernetes service nodePort
-	+ "5432"
+	+ "6432"
