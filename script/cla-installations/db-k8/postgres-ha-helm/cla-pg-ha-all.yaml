@@ -14,12 +14,14 @@ metadata:
     type: local # Sets PV's type
     app: cla-pg-ha
 spec:
-  storageClassName: local-storage
   capacity:
-    storage: 100Gi # Sets PV's size
+    storage: 10Gi # Sets PV's size
+  volumeMode: Filesystem
   accessModes:
-    - ReadWriteMany
-  hostPath:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
     path: "/k8-pv/pg" # Sets PV's host path
   nodeAffinity:
     required:
@@ -40,7 +42,7 @@ metadata:
 spec:
   storageClassName: local-storage
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
-      storage: 100Gi # Sets PVC's size
+      storage: 10Gi # Sets PVC's size
