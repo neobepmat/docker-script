@@ -42,7 +42,7 @@ To test the manifest to be deployed
 	+ NodedPort
 
 - @param service.nodePorts.postgresql Kubernetes service nodePort
-	+ "6432"
+	+ "30000"
 
 - @param postgresql.repmgrPassword PostgreSQL Repmgr password
 	+ password
