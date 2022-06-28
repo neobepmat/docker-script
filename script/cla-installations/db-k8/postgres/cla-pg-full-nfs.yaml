@@ -1,0 +1,107 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cla-pg-nfs
+  labels:
+    name: cla-pg-nfs
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: local-storage
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cla-pg-nfs-secret
+  namespace: cla-pg-nfs
+  labels:
+    app: cla-pg-nfs
+data:
+  POSTGRESQL_USERNAME: userk8
+  POSTGRESQL_PASSWORD: pwdk8
+  POSTGRESQL_DATABASE: TestDatabase
+  POSTGRESQL_POSTGRES_PASSWORD: Abcd1234
+---
+apiVersion: v1
+kind: PersistentVolume # Create PV 
+metadata:
+  name: cla-pg-nfs-pv # Sets PV name
+  labels:
+    type: local # Sets PV's type
+    app: cla-pg-nfs
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 10Gi # Sets PV's size
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    path: /volume1/k8-nsf
+    server: 172.10.250.75
+---
+apiVersion: v1
+kind: PersistentVolumeClaim # Create PVC
+metadata:
+  name: cla-pg-nfs-pvc # Sets PVC's name
+  namespace: cla-pg-nfs
+  labels:
+    app: cla-pg-nfs # Defines app to create PVC for
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi # Sets PVC's size
+  volumeName: cla-pg-nfs-pv
+---
+apiVersion: v1
+kind: Service # Create service
+metadata:
+  name: cla-pg-nfs-svc # Sets the service name
+  namespace: cla-pg-nfs
+  labels:
+    app: cla-pg-nfs # Defines app to create service for
+spec:
+  type: NodePort # Sets the service type
+  ports:
+    - port: 5432 # Sets the port to run the postgres application
+      nodePort: 30002
+  selector:
+    app: cla-pg-nfs
+---
+apiVersion: apps/v1
+kind: Deployment # Create a deployment
+metadata:
+  namespace: cla-pg-nfs
+  name: cla-pg-nfs # Set the name of the deployment
+spec:
+  replicas:  1 # Set 2 deployment replicas
+  selector:
+    matchLabels:
+      app: cla-pg-nfs
+  template:
+    metadata:
+      labels:
+        app: cla-pg-nfs
+    spec:
+      containers:
+        - name: postgres
+          image: bitnami/postgresql:13.7.0-debian-11-r7 # Docker image
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 5432 # Exposing the container port 5432 for PostgreSQL client connections.
+          envFrom:
+            - configMapRef:
+                name: cla-pg-nfs-secret # Using the ConfigMap postgres-secret
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: cla-pg-nfs-postgresdata
+      volumes:
+        - name: cla-pg-nfs-postgresdata
+          persistentVolumeClaim:
+            claimName: cla-pg-nfs-pvc
