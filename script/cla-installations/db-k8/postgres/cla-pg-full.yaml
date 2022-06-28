@@ -86,7 +86,7 @@ metadata:
   namespace: cla-pg
   name: cla-pg # Set the name of the deployment
 spec:
-  replicas: 2 # Set 2 deployment replicas
+  replicas: 1 # Set 2 deployment replicas
   selector:
     matchLabels:
       app: cla-pg

@@ -99,7 +99,7 @@ spec:
             - configMapRef:
                 name: cla-pg-nfs-secret # Using the ConfigMap postgres-secret
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data
+            - mountPath: /bitnami/postgresql/data
               name: cla-pg-nfs-postgresdata
       volumes:
         - name: cla-pg-nfs-postgresdata
