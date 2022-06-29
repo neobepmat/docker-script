@@ -16,9 +16,9 @@ spec:
         app: test
     spec:
       securityContext:
-          runAsUser: 1001
-          runAsGroup: 1001
-          fsGroup: 1001
+          runAsUser: 1028
+          runAsGroup: 1028
+          fsGroup: 1028
       containers:
       - name: test
         image: busybox
