@@ -619,7 +619,7 @@ pgpool:
     pullSecrets: []
     ## Set to true if you would like to see extra information on logs
     ##
-    debug: false
+    debug: true
   ## @param pgpool.customUsers Additional users that will be performing connections to the database using
   ## pgpool. Use this property in order to create new user/password entries that
   ## will be appended to the "pgpool_passwd" file
@@ -1408,7 +1408,7 @@ persistence:
   ## All replicas will share this PVC, using existingClaim with replicas > 1 is only useful in very special use cases.
   ## The value is evaluated as a template.
   ##
-  existingClaim: "cla-pvc-local"
+  existingClaim: ""
   ## @param persistence.storageClass Persistent Volume Storage Class
   ## If defined, storageClassName: <storageClass>
   ## If set to "-", storageClassName: "", which disables dynamic provisioning
@@ -1434,7 +1434,9 @@ persistence:
   ##   matchLabels:
   ##     app: my-app
   ##
-  selector: {}
+  selector:
+    matchLabels:
+      app: cla-pv-local-storage
 
 ## @section Traffic Exposure parameters
 
