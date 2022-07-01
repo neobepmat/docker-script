@@ -110,7 +110,7 @@ spec:
         app.kubernetes.io/name: sawtooth-0
     spec:
       securityContext:
-        fsGroup: 100        
+        fsGroup: 1001       
       containers:
         - name: postgres
           image: bitnami/postgresql:13.7.0-debian-11-r7
