@@ -6,43 +6,29 @@ metadata:
     name: cla-pg-ha
 ---
 apiVersion: v1
-kind: PersistentVolume # Create PV 
+kind: PersistentVolume
 metadata:
-  name: cla-pg-ha-pv # Sets PV name
-  namespace: cla-pg-ha
-  labels:
-    type: local # Sets PV's type
-    app: cla-pg-ha
+  name: cla-pg-ha-pv
 spec:
   capacity:
-    storage: 50Gi # Sets PV's size
-  volumeMode: Filesystem
+    storage: 100Gi
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
-  local:
-    path: "/k8-pv/pg-ha" # Sets PV's host path
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: kubernetes.io/hostname
-          operator: In
-          values:
-          - db-node01
+  nfs:
+    path: /volume1/k8-nsf/cla-postgres-ha
+    server: 172.10.250.75
+    readOnly: false
 ---
 apiVersion: v1
-kind: PersistentVolumeClaim # Create PVC
+kind: PersistentVolumeClaim
 metadata:
-  name: cla-pg-ha-pvc # Sets PVC's name
   namespace: cla-pg-ha
-  labels:
-    app: cla-pg-ha # Defines app to create PVC for
+  name: cla-pg-ha-pvc
 spec:
-  storageClassName: local-storage
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 50Gi # Sets PVC's size
+      storage: 100Gi
+  volumeName: cla-pg-ha-pv
