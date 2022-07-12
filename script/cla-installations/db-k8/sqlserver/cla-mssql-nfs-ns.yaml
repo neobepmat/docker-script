@@ -1,0 +1,15 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: cla-mssql-nfs
+  labels:
+    name: cla-mssql-nfs
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mssql
+  namespace: cla-mssql-nfs
+data:
+  SA_PASSWORD: UGVyYmFjY29NaVBpYWNpVW5TYWNjbyExMjM=
+type: Opaque
