@@ -1,0 +1,27 @@
+apiVersion: "acid.zalan.do/v1"
+kind: postgresql
+metadata:
+  name: acid-minimal-cluster
+  namespace: cla-zal-pg
+spec:
+  teamId: "acid"
+  volume:
+    size: 1Gi
+    storageClass: nfs-pg-zal
+  numberOfInstances: 3
+  users:
+    zalando:  # database owner
+    - superuser
+    - createdb
+    foo_user: []  # role for application foo
+  databases:
+    foo: zalando  # dbname: owner
+  preparedDatabases:
+    bar: {}
+  postgresql:
+    version: "14"
+  # spiloRunAsUser: 1001
+  # spiloRunAsGroup: 1001
+  # spiloFSGroup: 1001
+  enableMasterLoadBalancer: true
+  enableConnectionPooler: false
