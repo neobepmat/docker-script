@@ -7,8 +7,8 @@ spec:
   teamId: "acid"
   volume:
     size: 1Gi
-    storageClass: slow
-  numberOfInstances: 2
+    storageClass: local-storage
+  numberOfInstances: 3
   users:
     zalando:  # database owner
     - superuser
@@ -20,3 +20,5 @@ spec:
     bar: {}
   postgresql:
     version: "14"
+  enableMasterLoadBalancer: false
+  enableConnectionPooler: false
