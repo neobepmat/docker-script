@@ -6,7 +6,6 @@ CREATE TABLESPACE "TACO_M01B" OWNER postgres LOCATION '/var/lib/postgresql/data/
 CREATE TABLESPACE "TACO_M04A" OWNER postgres LOCATION '/var/lib/postgresql/data/TACO_M04A.DBF';
 CREATE TABLESPACE "TACO_M04B"  OWNER postgres LOCATION '/var/lib/postgresql/data/TACO_M04B.DBF';
 CREATE TABLESPACE "TACO_U" OWNER postgres LOCATION '/var/lib/postgresql/data/TACO_U.DBF';
-
 CREATE TABLESPACE "202109_01_M00A" OWNER postgres LOCATION '/var/lib/postgresql/data/202109_01_M00A.DBF';
 CREATE TABLESPACE "202109_01_M00B" OWNER postgres LOCATION '/var/lib/postgresql/data/202109_01_M00B.DBF';
 CREATE TABLESPACE "202109_01_M01A" OWNER postgres LOCATION '/var/lib/postgresql/data/202109_01_M01A.DBF';
@@ -86,7 +85,6 @@ CREATE TABLESPACE "BOD_SHOFFICE_USRA" OWNER postgres LOCATION '/var/lib/postgres
 CREATE TABLESPACE "BOD_SHOFFICE_USRB" OWNER postgres LOCATION '/var/lib/postgresql/data/BOD_SHOFFICE_USRB.DBF';
 CREATE TABLESPACE "BOD_SMS_TBS" OWNER postgres LOCATION '/var/lib/postgresql/data/BOD_SMS_TBS.DBF';
 CREATE TABLESPACE "BOD_SP_TBS" OWNER postgres LOCATION '/var/lib/postgresql/data/BOD_SP_TBS.DBF';
-CREATE TABLESPACE "BOD_TACO_TBS" OWNER postgres LOCATION '/var/lib/postgresql/data/BOD_TACO_TBS.DBF';
 CREATE TABLESPACE "CA_BOD_TBS" OWNER postgres LOCATION '/var/lib/postgresql/data/CA_BOD_TBS.DBF';
 CREATE TABLESPACE "CA_BOD_U" OWNER postgres LOCATION '/var/lib/postgresql/data/CA_BOD_U.DBF';
 CREATE TABLESPACE "CA_BOD_USRA" OWNER postgres LOCATION '/var/lib/postgresql/data/CA_BOD_USRA.DBF';
@@ -573,11 +571,4 @@ CREATE TABLESPACE "SPLANT_M04B" OWNER postgres LOCATION '/var/lib/postgresql/dat
 CREATE TABLESPACE "SPLANT_M07A" OWNER postgres LOCATION '/var/lib/postgresql/data/SPLANT_M07A.DBF';
 CREATE TABLESPACE "SPLANT_M07B" OWNER postgres LOCATION '/var/lib/postgresql/data/SPLANT_M07B.DBF';
 CREATE TABLESPACE "SPLANT_U" OWNER postgres LOCATION '/var/lib/postgresql/data/SPLANT_U.DBF';
-CREATE TABLESPACE "TACO_M00A" OWNER postgres LOCATION '/var/lib/postgresql/data/TACO_M00A.DBF';
-CREATE TABLESPACE "TACO_M00B" OWNER postgres LOCATION '/var/lib/postgresql/data/TACO_M00B.DBF';
-CREATE TABLESPACE "TACO_M01A" OWNER postgres LOCATION '/var/lib/postgresql/data/TACO_M01A.DBF';
-CREATE TABLESPACE "TACO_M01B" OWNER postgres LOCATION '/var/lib/postgresql/data/TACO_M01B.DBF';
-CREATE TABLESPACE "TACO_M04A" OWNER postgres LOCATION '/var/lib/postgresql/data/TACO_M04A.DBF';
-CREATE TABLESPACE "TACO_M04B" OWNER postgres LOCATION '/var/lib/postgresql/data/TACO_M04B.DBF';
-CREATE TABLESPACE "TACO_U" OWNER postgres LOCATION '/var/lib/postgresql/data/TACO_U.DBF';
 CREATE TABLESPACE "TEIC_REF_U" OWNER postgres LOCATION '/var/lib/postgresql/data/TEIC_REF_U.DBF';
