@@ -5,3 +5,8 @@
 > chmod 700 get_helm.sh
 > 
 > ./get_helm.sh
+
+
+Add Bitnami repo
+
+> helm repo add bitnami https://charts.bitnami.com/bitnami

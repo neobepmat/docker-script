@@ -1,0 +1,21 @@
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: mssql
+  namespace: {{ .Values.namespaceOverride | default "default" }}
+data:
+  mssql.conf: |
+    [EULA]
+    accepteula = Y
+    accepteulaml = Y
+    
+    [coredump]
+    captureminiandfull = true
+    coredumptype = full
+    
+    [hadr]
+    hadrenabled = {{ .Values.hadrEnabled | default 0 }}
+    
+    [language]
+    lcid = 1033
+  

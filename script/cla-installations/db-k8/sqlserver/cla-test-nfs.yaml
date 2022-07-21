@@ -1,0 +1,39 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: test-cla-mssql-nfs
+  labels:
+    name: test-cla-mssql-nfs
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  namespace: test-cla-mssql-nfs
+  name: test-busybox
+spec:
+  serviceName: test-busybox
+  replicas: 0
+  selector:
+    matchLabels:
+      app: test-busybox
+  template:
+    metadata:
+      labels:
+        app: test-busybox
+    spec:
+      containers:
+        - image: busybox
+          args: [/bin/sh, -c, 'sleep 9999' ]
+          volumeMounts:
+            - mountPath: /test
+              name: test-nfs-pvc-busybox
+          name: test-busybox
+  volumeClaimTemplates:
+  - metadata:
+      name: test-nfs-pvc-busybox
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: nfs-client-mssql
+      resources:
+        requests:
+          storage: 1Gi

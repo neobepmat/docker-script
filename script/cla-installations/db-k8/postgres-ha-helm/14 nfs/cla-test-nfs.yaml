@@ -1,0 +1,39 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: cla-test-nfs
+  labels:
+    name: cla-test-nfs
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  namespace: cla-test-nfs
+  name: busybox
+spec:
+  serviceName: busybox
+  replicas: 3
+  selector:
+    matchLabels:
+      app: busybox
+  template:
+    metadata:
+      labels:
+        app: busybox
+    spec:
+      containers:
+        - image: busybox
+          args: [/bin/sh, -c, 'sleep 9999' ]
+          volumeMounts:
+            - mountPath: /test
+              name: busybox-volume 
+          name: busybox
+  volumeClaimTemplates:
+  - metadata:
+      name: busybox-volume 
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: nfs-client
+      resources:
+        requests:
+          storage: 1Gi

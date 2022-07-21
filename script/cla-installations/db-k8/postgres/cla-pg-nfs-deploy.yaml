@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Service # Create service
+metadata:
+  name: cla-pg-nfs-svc # Sets the service name
+  namespace: cla-pg-nfs
+  labels:
+    app: cla-pg-nfs # Defines app to create service for
+spec:
+  type: NodePort # Sets the service type
+  ports:
+    - port: 5432 # Sets the port to run the postgres application
+      nodePort: 30002
+  selector:
+    app: cla-pg-nfs
+---
+apiVersion: apps/v1
+kind: Deployment # Create a deployment
+metadata:
+  namespace: cla-pg-nfs
+  name: cla-pg-nfs # Set the name of the deployment
+spec:
+  replicas:  1 # Set 2 deployment replicas
+  selector:
+    matchLabels:
+      app: cla-pg-nfs
+  template:
+    metadata:
+      labels:
+        app: cla-pg-nfs
+    spec:
+      securityContext:
+        fsGroup: 1001
+      containers:
+        - name: postgres
+          image: bitnami/postgresql:13.7.0-debian-11-r7 # Docker image
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 5432 # Exposing the container port 5432 for PostgreSQL client connections.
+          envFrom:
+            - configMapRef:
+                name: cla-pg-nfs-secret # Using the ConfigMap postgres-secret
+          volumeMounts:
+            - mountPath: /bitnami/postgresql
+              name: cla-pg-nfs-postgresdata
+      volumes:
+        - name: cla-pg-nfs-postgresdata
+          persistentVolumeClaim:
+            claimName: cla-pg-nfs-pvc
