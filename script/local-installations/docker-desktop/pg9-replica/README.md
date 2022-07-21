@@ -3,7 +3,7 @@
 Official URL
 > https://hub.docker.com/_/postgres
 
-The *postgres:9.6* has been used.
+The official Docker image for PostgreSQL has been used, version *postgres:9.6*.
 
 This test creates two different Postgres instances.
 The MASTER has a listening port on 6432, the SLAVE on the port 7432.
@@ -20,7 +20,7 @@ Settings are available for Master and Slave
 - pg-master
 	+ settings for MASTER
 	+ file format:
-		* "hostname" "postgres port" "password for postgres user" "Replication Slot" "User tablespaces folder" "PGDATA folder"
+		* "hostname" "postgres port" "password for postgres user" "Replication Slot" "User tablespaces folder" "PGDATA folder" "archive folder for WAL files"
 - pg-slave
 	+ settings for SLAVE
 	+ file format:
@@ -34,14 +34,14 @@ Settings are available for Master and Slave
 	+ create all the required folders to install two PostgreSQL databases
 - remove-slave-db.sh
 	+ clean all slave folders
-- dockerfile-master
-	+ the dockerfile to build the pg9-slave:1.0 Docker image
 - docker-master-customimage.sh
-	+ the docker run command to create the Slave container based on the custom image *pg13-slave:1.0*
+	+ the docker run command to create the Slave container based on the custom image *pg9-slave:1.0*
+- docker-build-slave-image.sh
+	+ the bash shell with the command to build the image to generate the salve container of postgres
 - dockerfile-slave
 	+ the dockerfile to build the pg9-slave:1.0 Docker image
 - docker-slave-customimage.sh
-	+ the docker run command to create the Slave container based on the custom image *pg13-slave:1.0*
+	+ the docker run command to create the Slave container based on the custom image *pg9-slave:1.0*
 - pg13localenv-master
 	+ environment variables used by MASTER
 - pg13localenv-slave

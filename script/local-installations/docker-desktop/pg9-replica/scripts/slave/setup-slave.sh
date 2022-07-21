@@ -6,6 +6,7 @@ MASTER_PWD_REPLICATOR=$(cat /tmp/postgresql/pg-master | awk '{print $3}');
 MASTER_USER_REPLICATOR=$(cat /tmp/postgresql/pg-master | awk '{print $4}');
 MASTER_SLOT_REPLICATOR=$(cat /tmp/postgresql/pg-master | awk '{print $5}');
 MASTER_FOLDER_TABLESPACES=$(cat /tmp/postgresql/pg-master | awk '{print $6}');
+MASTER_FOLDER_WAL_ARCHIVE=$(cat /tmp/postgresql/pg-master | awk '{print $7}');
 
 SLAVE_HOSTNAME=$(cat /tmp/postgresql/pg-slave | awk '{print $1}');
 SLAVE_PGDATA=$(cat /tmp/postgresql/pg-slave | awk '{print $4}');
@@ -26,6 +27,7 @@ if [[ ! -a ${SLAVE_PGDATA}/.do-not-repeat-init ]] ; then
 	standby_mode = 'on'
 	primary_conninfo = 'host=${MASTER_HOSTNAME} port=${MASTER_PORT} user=${MASTER_USER_REPLICATOR} password=${MASTER_PWD_REPLICATOR} application_name=pgslave sslmode=prefer sslcompression=1 krbsrvname=postgres'
 	primary_slot_name = '${MASTER_SLOT_REPLICATOR}'
+    restore_command = 'cp ${MASTER_FOLDER_WAL_ARCHIVE}/%f "%p"'
 	EOS
 
     echo Set permissions for file [recovery.conf]

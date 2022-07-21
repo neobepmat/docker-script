@@ -1,0 +1,1 @@
+docker build -t pg9-slave:1.0 -f dockerfile-slave .
