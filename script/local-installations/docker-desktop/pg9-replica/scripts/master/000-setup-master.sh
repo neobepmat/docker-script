@@ -15,7 +15,7 @@ create_directory () {
 	then
 	    echo "$1 exists on your filesystem."
 	else
-		mkdir $1;
+		mkdir "$1";
 	fi
 }
 
