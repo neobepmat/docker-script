@@ -1,5 +1,10 @@
 # Initdb
 
+## Legenda
+
+- $PG_DATA (for CLADB60 and CLADB70)
+> C:\Program Files\PostgreSQL\9.6\data
+
 ## Primary Master
 
 - Changes for _postgresql.conf_

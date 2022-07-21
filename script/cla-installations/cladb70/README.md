@@ -5,11 +5,13 @@ This folder contains information about installation and configuration of service
 ## TOC
 
 - elenco-tablespaces.cmd
-	+ batch che crea tutte i tablespace esistenti su CLADB60
+	+ batch to create all the CLA tablespaces used in CLA (same configuration as CLADB60)
 
 ## Procedures
 
 - initdb
-	+ doc with how to setup a primary replica master and a slave standby
+	+ how to setup a primary replica master and a slave standby
 - failover
 	+ doc with the procedures to promote a standby server to primary master and transforming primary to standby server
+- failback
+	+ to be prepared
