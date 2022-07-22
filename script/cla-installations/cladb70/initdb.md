@@ -24,12 +24,12 @@ hot_standby = on
 
 - Create replication role (replace the list of asterisks with a password)
 ```sql
-create role repmgr with replication login encrypted password '***********';
+create role replicator with replication login encrypted password 'postgresSQL2017';
 ```
 
 - Changes to pg_hba.conf (specify the ip address of the standby server)
 ```
-host    replication     replicator          192.168.56.26/32           md5
+host    replication     replicator          192.168.59.26/32           md5
 ```
 
 - Reload the configuration
@@ -45,12 +45,12 @@ host    replication     replicator          192.168.56.26/32           md5
 
 - From the Standby server, perform primary server backup
 ```
-"C:\Program Files\PostgreSQL\9.6\bin\pg_basebackup.exe" -D "C:\Program Files\PostgreSQL\9.6\data" -X stream --write-recovery-conf --slot=standby1 -h 192.168.56.25 -p 5432 -U replicator -W
+"C:\Program Files\PostgreSQL\9.6\bin\pg_basebackup.exe" -D "C:\Program Files\PostgreSQL\9.6\data" -X stream --write-recovery-conf --slot=standby1 -h 192.168.59.25 -p 5432 -U replicator -W
 ```
 
 - The file `recovery.conf` is automatically created and populated based on pg_basebackup parameters. Verify the contents
 ```
 standby_mode = 'on'
-primary_conninfo = 'user=postgres host=localhost port=30001 sslmode=prefer sslcompression=1 krbsrvname=postgres'
+primary_conninfo = 'user=postgres host=192.168.59.25 port=5432 sslmode=prefer sslcompression=1 krbsrvname=postgres'
 primary_slot_name = 'standby1'
 ```
