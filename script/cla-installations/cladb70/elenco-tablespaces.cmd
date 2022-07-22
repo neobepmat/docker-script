@@ -1,4 +1,4 @@
-SET RootFolder=C:\Program Files\Postgresql\9.6\data
+SET RootFolder=C:\Program Files\PostgreSQL\9.6\data
 
 mkdir "%RootFolder%\202109_01_M00A.DBF"
 mkdir "%RootFolder%\202109_01_M00B.DBF"

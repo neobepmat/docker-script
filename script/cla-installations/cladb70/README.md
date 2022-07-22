@@ -15,3 +15,10 @@ This folder contains information about installation and configuration of service
 	+ doc with the procedures to promote a standby server to primary master and transforming primary to standby server
 - failback
 	+ to be prepared
+	
+## Scripts
+
+- elenco-tablespaces.cmd
+	+ generates the folders for all the tablespaces defined in the server 
+- pg_basebackup.cmd
+	+ command for pg_basebackup taken from CLADB60 and saving all the data file to a new PG_DATA location configurable in the script
