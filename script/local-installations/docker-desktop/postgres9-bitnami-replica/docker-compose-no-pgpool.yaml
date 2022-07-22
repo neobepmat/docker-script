@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  pgprimary:
+    image: bitnami/postgresql:9.6
+    ports:
+      - 6432:5432
+    volumes:
+      - pgprimary_data:/bitnami/postgresql
+    environment:
+      - POSTGRESQL_REPLICATION_MODE=master
+      - POSTGRESQL_REPLICATION_USER=postgres
+      - POSTGRESQL_REPLICATION_PASSWORD=s3cret
+      - POSTGRESQL_PASSWORD=s3cret
+      - POSTGRESQL_DATABASE=test_db
+  pgreplica:
+    image: bitnami/postgresql:9.6
+    ports:
+      - 7432:5432
+    depends_on:
+      - pgprimary
+    volumes:
+      - pgslave_data:/bitnami/postgresql
+    environment:
+      - POSTGRESQL_REPLICATION_MODE=slave
+      - POSTGRESQL_REPLICATION_USER=postgres
+      - POSTGRESQL_REPLICATION_PASSWORD=s3cret
+      - POSTGRESQL_MASTER_HOST=pgprimary
+      - POSTGRESQL_PASSWORD=s3cret
+volumes:
+  pgprimary_data:
+  pgslave_data:

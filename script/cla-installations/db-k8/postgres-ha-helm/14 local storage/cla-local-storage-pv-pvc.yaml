@@ -1,0 +1,102 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: cla-pg-ha
+  labels:
+    name: cla-pg-ha
+---
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: cla-local-storage
+  namespace: cla-pg-ha
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: Immediate
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: cla-pv-local-storage-01
+  labels:
+    app: cla-pv-local-storage
+spec:
+  capacity:
+    storage: 20Gi
+  volumeMode: Filesystem
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: cla-local-storage
+  local:
+    path: /k8-pv/pg-ha-01
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - db-node02
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: cla-pv-local-storage-02
+  labels:
+    app: cla-pv-local-storage
+spec:
+  capacity:
+    storage: 20Gi
+  volumeMode: Filesystem
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: cla-local-storage
+  local:
+    path: /k8-pv/pg-ha-02
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - db-node02
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: cla-pv-local-storage-03
+  labels:
+    app: cla-pv-local-storage
+spec:
+  capacity:
+    storage: 20Gi
+  volumeMode: Filesystem
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: cla-local-storage
+  local:
+    path: /k8-pv/pg-ha-03
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - db-node02
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: cla-pvc-local
+#   namespace: cla-pg-ha
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   storageClassName: cla-local-storage
+#   resources:
+#     requests:
+#       storage: 5Gi

@@ -24,6 +24,9 @@
 - Kind
    + kubernetes cluster useful for testing purposes
    
+- Security Context
+   + A security context defines privilege and access control settings for a Pod or Container.
+   
 ## ServiceTypes
    
 Kubernetes `ServiceTypes` allow you to specify what kind of Service you want. The default is `ClusterIP`.
