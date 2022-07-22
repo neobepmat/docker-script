@@ -15,7 +15,7 @@ create_directory () {
 	then
 	    echo "$1 exists on your filesystem."
 	else
-		mkdir $1;
+		mkdir -p "$1";
 	fi
 }
 
@@ -27,7 +27,6 @@ create_directory "TACO_M01B.DBF";
 create_directory "TACO_M04A.DBF";
 create_directory "TACO_M04B.DBF";
 create_directory "TACO_U.DBF";
-
 create_directory "202109_01_M00A.DBF";
 create_directory "202109_01_M00B.DBF";
 create_directory "202109_01_M01A.DBF";
