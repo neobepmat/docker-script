@@ -8,14 +8,11 @@ This repository collects modifications for docker containers mainly used in CLA 
 The folder _script/templates_ includes all the script and command files to deploy docker containers.
 Every docker container has its own folder, e.g. _script/templates/nexus_ is used by Nexus OSS.
 
-The _script/templates/cla-installations_ includes files and notes of post installations steps executed while installing and configuring the Linux Server in CLA organization.
+The _script/cla-installations_ includes files and notes of post installations steps executed while installing and configuring the Linux Server in CLA organization.
 
-The _script/templates/cla-installations/cladb80_ includes files and notes of post installations steps executed while installing and configuring the _CLADB80_ database server:
-- Postgres 13 Test and Production
-- Postgres 9 Test
-- Sql Server 2019 Express Test
+The folder _script/local-installations_ includes similar information to _cla-installations_ but to be used on local environments, e.g. docker desktop - minikube - kind.
 
-The folder _script/templates/cla-installations/cla-topology_ contains files to show via picture the topology of CLA services.
+The folder _script/cla-installations/cla-topology_ contains files to show via picture the topology of CLA services.
 
 
 ## Template Docker list
@@ -30,8 +27,12 @@ Every folder of _script/templates_ represents a different image/container, hereu
     + go container and go snippet for perf tests
 - kubernetes
     + minikube installation with readme and legenda
+- generate-sql-statements
+    + bash script using awk command to generate code snippets, for Linux and Windows
 - gitlab
     + compose for Gitlab installation, based on Gitlab Community Edition
+- kubernetes
+    + legenda, cheat sheet and information regarding Kubernetes world
 - liget
     + docker run for Nuget server fork of Baget
 - nexus
@@ -45,7 +46,7 @@ Every folder of _script/templates_ represents a different image/container, hereu
 - postgres-9.6-debian
     + docker compose for Postgres 9.6 in Linux Debian 10.9 container
 - postgres-common-scripts
-    + bash scripts, sql scripts useful for docker postgres containers
+    + bash scripts, sql scripts useful for docker postgres containers - kubernetes usage
 - python2-7
     + docker container to run linux image for python 2.7
 - postgres13-pgbouncer
