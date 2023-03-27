@@ -24,3 +24,4 @@ CREATE TABLESPACE "TMS_PG_M00B" OWNER postgres LOCATION '/usr/pg/usr_tblspcs/TMS
 CREATE TABLESPACE "TMS_PG_M06A" OWNER postgres LOCATION '/usr/pg/usr_tblspcs/TMS_PG_M06A';
 CREATE TABLESPACE "TMS_PG_M06B" OWNER postgres LOCATION '/usr/pg/usr_tblspcs/TMS_PG_M06B';
 CREATE TABLESPACE "TMS_PG_U" OWNER postgres LOCATION '/usr/pg/usr_tblspcs/TMS_PG_U';
+CREATE TABLESPACE "EXYTE_U" OWNER postgres LOCATION '/usr/pg/usr_tblspcs/EXYTE_U';

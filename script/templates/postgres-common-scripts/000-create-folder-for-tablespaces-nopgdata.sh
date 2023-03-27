@@ -91,3 +91,6 @@ create_directory "TMS_PG_M06B";
 
 echo "Creating tablespaces TMS_PG_U"
 create_directory "TMS_PG_U";
+
+echo "Creating tablespaces EXYTE_U"
+create_directory "EXYTE_U";
